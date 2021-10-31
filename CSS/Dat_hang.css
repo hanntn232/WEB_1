@@ -1,0 +1,99 @@
+@font-face {
+    font-family: OpenSans;
+    src: url(../CSS/Font/OpenSans-Regular.ttf);
+}
+*{
+    font-family: Opensans;
+    font-size: 20px;
+}
+.giohang1{
+    margin: 0px;
+    padding: 0px 0px !important;
+}
+.donhang--container{
+    margin: 20px 30px;
+}
+.donhang--container>.donhang--title{
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px 30px;
+    width: 300px;
+    font-weight: bold;
+    color: white;
+    background-color: #FFC700;
+    justify-content: center;
+    border-radius: 5px;
+}
+.donhang--khachhang2{
+    display: none;
+}
+.donhang--khachhang1>div,.donhang--khachhang2>div{
+    border: 1px solid lightgray;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.donhang--khachhang1,.donhang--khachhang2{
+    font-weight: bold;
+    width: 80%;
+    margin: auto;
+    min-width: 1000px;
+}
+.donhang--khachhang1 span,.donhang--khachhang2 span{
+    font-weight: normal;
+}
+.btn--thaydoi{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.btn--thaydoi>div{
+    text-align: center;
+}
+.btn--thaydoi>div>button{
+    border: 1px solid #ABAAAA;
+    border-radius: 5px;
+    background-color: #ABAAAA;
+    font-weight: bold;
+    padding: 10px 20px;
+
+}
+.btn--thaydoi>div>button:hover{
+    background-color: lightgray;;
+}
+.giohang1--footer>div{
+    text-align: right;
+}
+
+
+@media screen and (max-width: 786px) {
+    .donhang--container{
+        margin: 0 !important;
+        min-width: 300px;
+    }
+   .donhang--khachhang1{
+       display: none;
+   }
+   .donhang--khachhang2{
+    display: block;
+    width: 100% !important;
+    margin-right: 0px !important;
+    min-width: 300px;
+   }
+   *{
+        font-size: 10px;
+    }
+   .donhang--title{
+    padding: 10px 30px;
+    width: 200px !important;
+   }
+   .btn--thaydoi>div>button{
+       padding: 5px 10px;
+       margin: 5px auto;
+       width: 70px;
+   }
+   .btn-tienhanhdathang{
+    padding: 5px 10px !important;
+    margin: 5px auto !important;
+    width: 70px !important;
+   }
+}
