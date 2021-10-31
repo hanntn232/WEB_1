@@ -146,6 +146,7 @@ section.giohang1{
 }
 .giohang2 .giohang--dongia>p,.giohang2 .giohang--thanhtien>p{
     font-weight: bold;
+    color: red;
 }
 a{
     text-decoration: none;
