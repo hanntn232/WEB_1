@@ -2,6 +2,7 @@
     font-family: OpenSans;
     src: url(../CSS/Font/OpenSans-Regular.ttf);
 }
+
 *{
     font-family: Opensans;
     font-size: 20px;
@@ -211,7 +212,24 @@ a:visited{
 .btn-tienhanhdathang:hover{
     background-color: #FFD541;
 }
-@media screen and (max-width: 786px)
+
+/* Định dạng frame footer */
+.frame--footer--container{
+    width: 100%;
+    height: 350px;
+    position: relative;
+    min-width: 1000px;
+}
+.frame--footer{
+    position: absolute;
+    bottom: 0;
+    min-width: 1000px;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 720px)
 {
    .giohang1{
        display: none !important;
@@ -227,6 +245,14 @@ a:visited{
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
     min-width: 300px;
+   }
+   .frame--footer--container{
+       min-width: 300px;
+       height: 500px;
+   }
+   .frame--footer{
+       min-width: 300px;
+       height: 450px;
    }
 
    /* quy định font chữ nhỏ */
@@ -314,3 +340,19 @@ a:visited{
     }
 }
 
+/* Định dạng header */
+.header{
+    min-width: 1000px;
+}
+.header>.header--overlay{
+    min-width: 1000px;
+}
+
+@media screen and (max-width: 720px) {
+    .header{
+        min-width: 300px;
+    }
+    .header>.header--overlay{
+        min-width: 300px;
+    }
+}
