@@ -213,17 +213,18 @@ a:visited{
     background-color: #FFD541;
 }
 
+
 /* Định dạng frame footer */
 .frame--footer--container{
     width: 100%;
     height: 350px;
     position: relative;
-    min-width: 1000px;
+    min-width: 1016px;
 }
 .frame--footer{
     position: absolute;
     bottom: 0;
-    min-width: 1000px;
+    min-width: 1016px;
     width: 100%;
     height: 320px;
     overflow: hidden;
@@ -342,10 +343,10 @@ a:visited{
 
 /* Định dạng header */
 .header{
-    min-width: 1000px;
+    min-width: 1016px;
 }
 .header>.header--overlay{
-    min-width: 1000px;
+    min-width: 1016px;
 }
 
 @media screen and (max-width: 720px) {
