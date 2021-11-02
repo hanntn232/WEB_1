@@ -9,7 +9,6 @@
 .web--container{
     background-color: #FEF8E1;
     min-width: 300px;
-    
 }
 .web--header{
     margin-top: 20px;
@@ -108,7 +107,7 @@
 }
 .frame--footer--container{
     width: 100%;
-    height: 350px;
+    height: 450px;
     position: relative;
     min-width: 100px;
 }
@@ -117,7 +116,7 @@
     bottom: 0;
     min-width: 100px;
     width: 100%;
-    height: 320px;
+    height: 400px;
     overflow: hidden;
 }
 @media screen and (max-width:720px) {

@@ -12,7 +12,7 @@
 }
 .footer--mainpage{
     position: relative;
-    height: 300px;
+    height: 400px;
     min-width: 300px;
     background-image:url(../Image/footer.jpg); background-size: cover;
     background-repeat: no-repeat;
@@ -48,7 +48,7 @@
         font-size: 12px !important;
     }
     .footer--mainpage{
-        height: 450px;
+        height: 450px !important;
     }
     .footer--mainpage .footer--container>div{
         padding-left: 10%;
