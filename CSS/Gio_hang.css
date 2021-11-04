@@ -53,41 +53,6 @@ section.giohang1{
 }
 
 
-/* Quy định độ rộng từng column trong header */
-.giohang--head>:nth-child(1){
-    width: 18%;
-}
-.giohang--head>:nth-child(2){
-    width: 42%;
-}
-.giohang--head>:nth-child(3){
-    width: 13%;
-}
-.giohang--head>:nth-child(4){
-    width: 14%;
-}
-.giohang--head>:nth-child(5){
-    width: 13%;
-}
-/* Quy định độ rộng từng column trong item */
-.giohang--item>:nth-child(1){
-    width: 18%;
-}
-.giohang--item>:nth-child(2){
-    width: 42%;
-}
-.giohang--tensp{
-    width: 42%;
-}
-.giohang--item>:nth-child(3){
-    width: 13%;
-}
-.giohang--item>:nth-child(4){
-    width: 14%;
-}
-.giohang--item>:nth-child(5){
-    width: 13%;
-}
 /* quy định border trong head */
 .giohang--head>div{
     border: 1px solid lightgray;
@@ -226,7 +191,7 @@ a:visited{
     bottom: 0;
     min-width: 1016px;
     width: 100%;
-    height: 320px;
+    height: 300px;
     overflow: hidden;
 }
 

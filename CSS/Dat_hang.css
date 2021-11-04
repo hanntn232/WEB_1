@@ -11,7 +11,10 @@
     padding: 0px 0px !important;
 }
 .donhang--container{
-    margin: 20px 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding-left: 10px;
 }
 .donhang--container>.donhang--title{
     margin: auto;
@@ -23,6 +26,7 @@
     background-color: #FFC700;
     justify-content: center;
     border-radius: 5px;
+ 
 }
 .donhang--khachhang2{
     display: none;

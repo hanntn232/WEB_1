@@ -47,6 +47,9 @@
     *{
         font-size: 12px !important;
     }
+    .footer--mainpage .fa-facebook,.footer--mainpage .fab.fa-instagram,.footer--mainpage .fab.fa-pinterest-square{
+        font-size: 20px !important;
+    }
     .footer--mainpage{
         height: 450px;
     }
