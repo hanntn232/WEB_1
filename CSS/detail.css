@@ -37,8 +37,12 @@ html {
 
 
 /* App container */
+.app__container{
+    min-width: 300px;
+}
 .app{
     background-color: #FEF8E1;
+    min-width: 300px;
 }
 .app__content{
     padding-top: 24px;
@@ -334,7 +338,7 @@ html {
     }
     .frame--footer{
         min-width: 300px;
-        height: 450px;
+        height: 400px;
     }
     
 }
