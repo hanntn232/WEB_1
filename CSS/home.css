@@ -134,6 +134,9 @@
 .nav--bar ul{
     list-style-type: none;
 }
+.nav--bar a:hover{
+    color: #FBE89E;
+}
 .nav__pc ul{
     list-style-type: none;
 }
