@@ -50,6 +50,9 @@ html {
     min-width: 300px;
     
 }
+.app__container{
+    padding: 10px 20px;
+}
 .app__content{
     padding-top: 24px;
 }
@@ -129,6 +132,9 @@ html {
     will-change: transform;
 
 }
+.home-product-item__name{
+    height: 60px;
+}
 .home-product-item:hover{
     transform: translateY(-1px);
     box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05) ;
@@ -155,7 +161,10 @@ html {
     margin: 20px ;
     padding-bottom: 10px;
     text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
 .home-product-item__price-curent{
     font-size: 1.4rem;
     color: var(--red-color);
