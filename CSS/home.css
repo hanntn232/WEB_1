@@ -88,13 +88,73 @@
     margin-bottom: auto;
     margin-right: 5px;
 }
+/* navbar */
 .navbar{
     background-color: #FFC700;
-    
 }
-.navbar li a{
+.nav__bars-btn{
+    width: 28px;
+    height: 28px;
     color: black;
+    display: none;
+    margin-left: 10px;
 }
+.navbar--overlay{
+    position:fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+}
+.nav--bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    max-width: 100%;
+    transform: translateX(-100%);
+}
+.nav__input:checked ~ .navbar--overlay{
+    display: block;
+}
+.nav__list{
+    margin-top: 0px;
+    background-color: white;
+    height: 100%;
+}
+.nav--bar--close{
+    color: black;
+    position: absolute;
+    top: 10px;
+    right: 1rem;
+}
+.nav--bar ul{
+    list-style-type: none;
+}
+.nav__pc ul{
+    list-style-type: none;
+}
+
+.nav--link{
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px 0;
+}
+.nav__input{
+    display: none;
+}
+.nav__input:checked ~ .nav--bar{
+    transform: translateX(0%);
+}
+.nav__input:checked ~ .nav__list{
+    transform: translateX(0%);
+}
+
+/*  */
 
 .search--bar{
     margin-right: 30px;
@@ -112,7 +172,7 @@
     border-top-left-radius:7px;
     border-bottom-left-radius:7px;
     border: 1px ;
-    width: 170px;
+    width: 320px;
 }
 .web--banner{
     width: 100%;
@@ -442,7 +502,7 @@
 }
 .web--whychoose--content{
     margin-left: 30px;
-    width: 40%;
+    width: 30%;
     background-color: #FF9E0C;
     border-radius: 10px;
 
@@ -525,6 +585,17 @@
     height: 400px;
     overflow: hidden;
 }
+@media screen and (max-width: 900px) {
+    /* navbar */
+    .nav__bars-btn{
+        display: block;
+    }
+    .nav__pc{
+        display: none;
+    }
+    /*  */
+    
+}
 @media screen and (max-width: 720px) {
     @font-face {
         font-family: OpenSans;
@@ -547,6 +618,7 @@
     .header--contact{
         display: none
     }
+    
     .search--bar{
         width: 100%;
     }
