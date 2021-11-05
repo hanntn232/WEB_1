@@ -12,9 +12,11 @@
     background-color: #FEF8E1 !important;  
     margin-left: 0;
     margin-right: 0;
-    
+    min-width: 300px;
 }
-
+.web--container ::placeholder{
+    font-size: 11px;
+}
 .web--header--1{
     display: flex;
     width: 100%;
@@ -101,12 +103,14 @@
 }
 .search--button{
     background-color: #FFA800;
-    border-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
     color: white;
     border: 1px ;
 }
 .search--input{
-    border-radius:7px;
+    border-top-left-radius:7px;
+    border-bottom-left-radius:7px;
     border: 1px ;
     width: 170px;
 }
@@ -172,9 +176,9 @@
     background-color: white;
     border-radius: 10px;
     justify-content: space-evenly;
-    margin-right: 30px;
+    margin-right: 10px;
     text-align: center;
-    margin-left: 15px;
+    margin-left: 10px;
     
 }
 .special--product--item{
@@ -191,7 +195,7 @@
 /*  */
 .web--eatwhat{
     margin: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 .web--eatwhat--content{
     text-align: center;
@@ -204,15 +208,15 @@
 .web--eatdogcat{
     justify-content: space-evenly;
     display: flex;
+    height: auto;
 }
 .web--eatdog{
-    height: 200px;
-    width: 50%;
-    
+    height: auto;
+    /* width: 50%; */
 }
 .web--eatcat{
-    height: 200px;
-    width: 50%;
+    height: auto;
+    /* width: 50%; */
 }
 .web--eatdog--detail1{
     display: flex;
@@ -230,11 +234,13 @@
     height: 50px;
     line-height: 50px;
     border-radius: 10px;
+    margin: auto;
     
 }
-.web--eatdog--block{
+.web--eatdog--block,.web--eatcat--block{
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
 }
 
 .web--eatcat--block p{
@@ -244,6 +250,7 @@
     line-height: 50px;
     border-radius: 10px;
     text-align: center;
+    margin: auto;
 }
 
 .special--product--detail1{
@@ -252,9 +259,13 @@
     margin-right: 10px;
     text-align: center;
 }
-.button--more{
+.web--fashion--rectangle .button--more{
     text-align: center;
-    margin-top: 150px;
+    margin-top: 50px;
+}
+.web--eatwhat .button--more{
+    text-align: center;
+    margin-top: 50px;
 }
 .web__button--eatdogcat{
     height: 40px;
@@ -297,6 +308,7 @@
     width: 50%;
     margin: auto;
     flex: 1;
+    padding-top: 20px;
 }
 .web--fashion--content p{
     color: #FFA800;
@@ -304,7 +316,7 @@
     
 }
 .web--fashion--rectangle{
-    height: 150px;
+    height: auto;
     align-items: center;
     
 }
@@ -320,10 +332,9 @@
 
 /* blog */
 .web--blog--pet{
-    height: 300px;
+    height: auto;
     background-color: #FEF8E1;
-    margin-top: 300px;
-    
+    padding-top: 30px;
 }
 .blog--pet--content{
     text-align: center;
@@ -339,7 +350,7 @@
     font-size: x-large;
 }
 .blog--pet--rectangle{
-    height: 200px;
+    height: auto;
     width: 100%;
     display: flex;
 }
@@ -416,7 +427,7 @@
 .more--floatright{
     float: right;
     margin-right: 50px;
-    margin-top: 230px;
+    margin-top: -50px;
 }
 .web__button--floatright{
     border-radius: 10px;
@@ -424,18 +435,21 @@
     border:1px
 }
 .web--whychoose{
-    margin-top: 300px;
+    /* margin-top: 300px; */
     background-color: #FBE89E;
     width: 100%;
+    padding-top: 20px;
 }
 .web--whychoose--content{
     margin-left: 30px;
     width: 40%;
     background-color: #FF9E0C;
     border-radius: 10px;
+
 }.web--whychoose--content p{
     color: white;
-    font-size: xx-large;
+    font-size: 30px;
+    text-align: center;
 }
 .web--whychoose--block{
     margin:20px 40px 0 40px;
@@ -444,17 +458,19 @@
 }
 .whychoose--block--right{
     float: right;
-   
+    margin-left: 10px;
 }
 .whychoose--block--right img{
     height: 300px;
+    width: auto;
     float: right;
 }
 .whychoose--block--left{
     float: left;
     margin-top: auto;
     margin-bottom: auto;
-    
+    margin-right: 10px;
+    text-align: justify;
 }
 .whychoose--block--left p{
     font-size: x-large;
@@ -467,33 +483,37 @@
 }
 .web--register--info{
     background-color: #FFC700;
-    padding-top: 10px;
     display: flex;
+    padding: 20px 30px;
 }
 .web--register--content{
     flex: 3;
+    padding-right: 20px;
 }
 .web--register--email{
     flex: 4;
     display: flex;
     height: 50px;
-    margin-right: 20px;
+    margin-right: 5px;
+    
 }
 .register--email{
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     border: 1px;
     width: 80%;
 }
 .button__email{
     width: 38%;
-    border-radius: 10px;
-    margin-left: 20px;
+    border: 1px solid black;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: #FFC700;
 }
 
 .frame--footer--container{
     width: 100%;
-    height: 350px;
+    height: 400px;
     position: relative;
     min-width: 100px;
 }
@@ -502,7 +522,7 @@
     bottom: 0;
     min-width: 100px;
     width: 100%;
-    height: 320px;
+    height: 400px;
     overflow: hidden;
 }
 @media screen and (max-width: 720px) {
@@ -529,13 +549,13 @@
     }
     .search--bar{
         width: 100%;
-        
     }
     .search--input{
         width: 300px;
     }
     .web--eatdogcat{
         display: block;
+        height: auto;
     }
     .web--eatdogcat p{
         width: 120px;
@@ -556,28 +576,38 @@
     }
     .special--product--detail1{
         display: block;
-        
     }
     .web--eatdog--detail1{
         display: flex;
-        
+        width: 250px;
+        margin: auto;
     }
     .web--eatcat--detail1{
         display: flex;
+        width: 250px;
+        margin: auto;
+    }
+    .web--eatcat{
+        height: auto;
     }
     .web--eatdog{
         width: 100%;
-        margin-bottom: 100px;
+        margin-bottom: 20px;
+        height: auto;
     }
     /* fashion */
     .fashion--rectangle--detail{
         display: block;
+        height: auto !important;
         
+    }
+    .button--more{
+        margin-top: 20px;
     }
     .special--product--detail2{
         width: 300px;
         height: 200px;
-        
+        margin: auto;
     }
     .web--fashion{
         height: 1000px;
@@ -655,17 +685,18 @@
     }
     .web--blog--pet{
         margin-bottom: 30px;
-        padding-bottom: 600px;
+        padding-bottom: 20px;
     }
     .more--floatright{
-        margin-top: 650px;
-
+        margin-top: -10px;
+        margin-right: 20px;
     }
     .web--whychoose{
         padding-top: 50px;
         font-size: 15px;
         margin-top: 0;
     }
+
     .button__email{
         font-size: 13px;
         width: 100px;
@@ -679,8 +710,9 @@
     }
 
     .web--blog--pet{
-        margin-top: 600px;
-        height: 1000px;
+        margin-top: 20px;
+        height: auto;
+        margin-bottom: 0px;
     }
     /* special */
     
@@ -689,7 +721,7 @@
     /*  */
     .frame--footer--container{
         min-width: 300px;
-        height: 500px;
+        height: 450px;
     }
     .frame--footer{
         min-width: 300px;
