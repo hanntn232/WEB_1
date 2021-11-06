@@ -158,6 +158,9 @@
 .nav__pc ul{
     list-style-type: none;
 }
+.nav__pc a{
+    color: black;
+}
 
 .nav--link{
     text-decoration: none;
