@@ -28,6 +28,9 @@ a {
 .display-3 {
     font-size: 20px;
 }
+.display-4{
+    font-size: 16px;
+}
 /* layout */
 .container {
     max-width: 1200px;
@@ -92,6 +95,7 @@ a {
 .image-content{
     width:600px;
     height:350px;
+    object-fit: cover;
 }
 .readmore {
     color: black;
@@ -122,6 +126,12 @@ a {
 .main {
     background-color: #FEF8E1;
     min-width: 300px;
+}
+.trending-banner{
+    display:block;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
 }
 /* phần chia sẻ mxh */
 .link-pinterest {
