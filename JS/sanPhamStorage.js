@@ -10,7 +10,7 @@
      'Sữa bột cho mèo 110g Dr.Kyan Precaten',
      'Thức ăn cho mèo',
      590000,
-     500000)
+     500000,'../HTML_Chitiet_sanpham/Detail1.html')
 
  //Thêm sản phẩm 1 vào danh sách sản phẩm trước đó
  danhSachSanPham.push(sanPham1);
@@ -22,7 +22,7 @@
     'Nước rửa khóe mắt chó mèo Precaten',
     'Phụ kiện cho mèo',
     230000,
-    190000)
+    190000,'../HTML_Chitiet_sanpham/Detail2.html')
 
 //Thêm sản phẩm 2 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham2);
@@ -34,7 +34,7 @@ danhSachSanPham.push(sanPham2);
     'Canxi Phốt Pho - hỗ trợ điều trị cho thú cưng',
     'Thức ăn cho chó',
     399000,
-    276000)
+    276000,'../HTML_Chitiet_sanpham/Detail3.html')
 
 //Thêm sản phẩm 3 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham3);
@@ -46,7 +46,7 @@ var sanPham4 = taoDoiTuongSanPham(
     'Bát inox chống trượt cho chó mèo',
     'Phụ kiện cho chó',
     99000,
-    50000)
+    50000,'../HTML_Chitiet_sanpham/Detail4.html')
 
 //Thêm sản phẩm 4 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham4);
@@ -58,7 +58,7 @@ var sanPham5 = taoDoiTuongSanPham(
     'Bát Ăn Đôi Nhựa Hình Xương Cho Thú Cưng',
     'Phụ kiện cho mèo',
     69000,
-    39000)
+    39000,'../HTML_Chitiet_sanpham/Detail5.html')
 
 //Thêm sản phẩm 5 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham5);
@@ -70,7 +70,7 @@ var sanPham6 = taoDoiTuongSanPham(
     'Bình trữ thức ăn tự động cho thú cưng 1,6L',
     'Phụ kiện cho mèo',
     210000,
-    11000)
+    11000,'../HTML_Chitiet_sanpham/Detail6.html')
 
 //Thêm sản phẩm 6 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham6);
@@ -82,7 +82,7 @@ var sanPham7 = taoDoiTuongSanPham(
     'Bình treo chuồng vát Catchy 500ml',
     'Phụ kiện cho mèo',
     169000,
-    119000)
+    119000,'../HTML_Chitiet_sanpham/Detail7.html')
 
 //Thêm sản phẩm 7 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham7);
@@ -94,7 +94,7 @@ var sanPham8 = taoDoiTuongSanPham(
     'Balo vận chuyển chó mèo Phi hành',
     'Phụ kiện cho chó',
     579000,
-    390000)
+    390000,'../HTML_Chitiet_sanpham/Detail8.html')
 
 //Thêm sản phẩm 8 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham8);
@@ -106,7 +106,7 @@ var sanPham9 = taoDoiTuongSanPham(
     'Gel sạch răng Tropiclean FB Clean Teeth Gel',
     'Phụ kiện cho chó',
     70000,
-    55000)
+    55000,'../HTML_Chitiet_sanpham/Detail9.html')
 
 //Thêm sản phẩm 9 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham9);
@@ -118,7 +118,7 @@ var sanPham10 = taoDoiTuongSanPham(
     'Sữa tắm cho chó lông trắng SPIRIT White Dog',
     'Phụ kiện cho chó',
     200000,
-    150000)
+    150000,'../HTML_Chitiet_sanpham/Detail10.html')
 
 //Thêm sản phẩm 10 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham10);
@@ -130,7 +130,7 @@ var sanPham11 = taoDoiTuongSanPham(
     'Đồ chơi cho mèo PAW Happy Pet Circle 3 tầng',
     'Phụ kiện cho mèo',
     200000,
-    160000)
+    160000,'../HTML_Chitiet_sanpham/Detail11.html')
 
 //Thêm sản phẩm 11 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham11);
@@ -142,7 +142,7 @@ var sanPham12 = taoDoiTuongSanPham(
     'Đồ chơi bóng chuông cao su Bobo',
     'Phụ kiện cho mèo',
     80000,
-    49000)
+    49000,'../HTML_Chitiet_sanpham/Detail12.html')
 
 //Thêm sản phẩm 12 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham12);
@@ -154,7 +154,7 @@ var sanPham13 = taoDoiTuongSanPham(
     'Xương gặm tự nhiên vị gà Ferplast Goodbite',
     'Thức ăn cho chó',
     90000,
-    63000)
+    63000,'../HTML_Chitiet_sanpham/Detail13.html')
 
 //Thêm sản phẩm 13 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham13);
@@ -166,7 +166,7 @@ var sanPham14 = taoDoiTuongSanPham(
     'Sữa bột cho chó Dr.Kyan Predogen',
     'Thức ăn cho chó',
     349000,
-    250000)
+    250000,'../HTML_Chitiet_sanpham/Detail14.html')
 
 //Thêm sản phẩm 14 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham14);
@@ -178,7 +178,7 @@ var sanPham15 = taoDoiTuongSanPham(
     'Thức ăn cho mèo Royal Canin Hairball Care',
     'Thức ăn cho mèo',
     599000,
-    500000)
+    500000,'../HTML_Chitiet_sanpham/Detail15.html')
 
 //Thêm sản phẩm 15 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham15);
@@ -190,7 +190,7 @@ var sanPham16 = taoDoiTuongSanPham(
     'Thức ăn hạt khô cho mèo MININO',
     'Thức ăn cho mèo',
     229000,
-    179000)
+    179000,'../HTML_Chitiet_sanpham/Detail16.html')
 
 //Thêm sản phẩm 16 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham16);
@@ -202,7 +202,7 @@ var sanPham17 = taoDoiTuongSanPham(
     'Thức ăn cao cấp dành cho chó FIBs',
     'Thức ăn cho chó',
     299000,
-    199000)
+    199000,'../HTML_Chitiet_sanpham/Detail17.html')
 
 //Thêm sản phẩm 17 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham17);
@@ -214,7 +214,7 @@ var sanPham18 = taoDoiTuongSanPham(
     'Thức ăn cho chó mọi lứa tuổi Freshtrino Doca Dog',
     'Thức ăn cho chó',
     249000,
-    169000)
+    169000,'../HTML_Chitiet_sanpham/Detail18.html')
 
 //Thêm sản phẩm 18 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham18);
@@ -226,7 +226,7 @@ var sanPham19 = taoDoiTuongSanPham(
     'Thức ăn hạt dành cho mèo Whiskat',
     'Thức ăn cho mèo',
     319000,
-    189000)
+    189000,'../HTML_Chitiet_sanpham/Detail19.html')
 
 //Thêm sản phẩm 19 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham19);
@@ -238,7 +238,7 @@ var sanPham20 = taoDoiTuongSanPham(
     'Thức Ăn Khô Cho Chó Con Smart Heart Gold',
     'Thức ăn cho chó',
     399000,
-    310000)
+    310000,'../HTML_Chitiet_sanpham/Detail20.html')
 
 //Thêm sản phẩm 20 vào danh sách sản phẩm trước đó
 danhSachSanPham.push(sanPham20);
