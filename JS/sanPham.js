@@ -10,7 +10,7 @@ function taoID(){
 
 
 //Bước 2: Tạo đối tượng sản phẩm
-function taoDoiTuongSanPham(hinhAnh, ten,danhMuc, giaGoc, giaBan,id,linkChiTietSanPham){
+function taoDoiTuongSanPham(hinhAnh, ten,danhMuc, giaGoc, giaBan,linkChiTietSanPham,id){
     //Tạo đối tượng sản phẩm
     var sanPham = new Object();
     if(id == null){
@@ -53,7 +53,7 @@ function chuyenDoiTuongSanPhamSangHTML(sanPham){
     var html = '';
     html += '<div class="col l-2-4 m-4 c-6">\n'
     html += '<!-- Product item -->\n' 
-    html += '<a class="home-product-item" href="#" target="_self">\n'
+    html += '<a class="home-product-item" href="' + sanPham.linkChiTietSanPham + '" target="_self">\n'
     html += '<div class="home-product-item__img" style="background-image: url(' + sanPham.hinhAnh + ');">\n'
     html += '</div>\n'
     html += '<h4 class="home-product-item__name">' + sanPham.ten + '</h4>\n'
