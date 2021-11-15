@@ -1,7 +1,10 @@
  //Tạo danh sách sản phẩm
- var danhSachSanPham = localStorage.getItem('danhSachSanPham');
+    danhSachSanPham = localStorage.getItem('danhSachSanPham');
  if(danhSachSanPham == null){
-     danhSachSanPham = new Array();
+    danhSachSanPham = new Array();
+ }
+ else{
+    danhSachSanPham = JSON.parse(danhSachSanPham);
  }
  
  //Tạo đối tượng sản phẩm 1

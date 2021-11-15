@@ -200,6 +200,29 @@
             <iframe src="../HTML/Footer.html" frameborder="0" class="frame--footer" scrolling="no"></iframe>
         </div>
     </div>
+
+
+    <!-- Test thẻ script -->
+    <script>
+
+        function them(){
+        //Lấy id Giỏ hàng của khách hàng
+        var idGioHang = layIdGioHang();
+
+
+        //Lấy danh sách item giỏ hàng của khách hàng từ local storage
+        var danhSachItemGioHang = layDanhSachItemGioHang(idGioHang);
+
+        //Tạo đối tượng item giỏ hàng
+        var itemGioHang = taoDoiTuongItemGioHang(idGioHang,'29755420_1636817383654',1);
+
+        //Thêm vào giỏ hàng
+        themSanPhamVaoGioHang(itemGioHang);
+
+        alert('Thêm sản phẩm vào giỏ hàng thành công!')
+        }
+        
+    </script>
 </body>
 
 </html>
