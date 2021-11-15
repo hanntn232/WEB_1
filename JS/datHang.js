@@ -141,4 +141,16 @@ function hienThiDanhSachItemDatHang_Mobile(idGioHang){
     return htmlTong;
 }
 
+//--------TÍNH TỔNG GIÁ TRỊ ĐƠN HÀNG
+function tinhTongGiaTriDonHang(idGioHang){
+    var danhSachItemGioHang = JSON.parse(localStorage.getItem('danhSachItemGioHang_'+idGioHang));
+    var tongTien = 0;
+    for(var i=0; i<danhSachItemGioHang.length; i++){
+        tongTien+= danhSachItemGioHang[i].giaBan*danhSachItemGioHang[i]*soLuong;
+    }
+    return tongTien;
+}
+
+
+
 //Còn thiếu: form và js thay đổi thông tin đặt hàng. Lưu dữ liệu khi tiến hành đặt hàng.
