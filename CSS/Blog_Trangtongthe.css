@@ -11,6 +11,7 @@
     color: #FFC700; 
     font-family: 'coiny';
 }
+
 .page__bg{
     background-color:  #FEF8E1;
     padding-top: 20px;
@@ -24,6 +25,7 @@
 .img-responsive{
     width: 100%;
     border-radius: 3%;
+    text-decoration: none;
 }
 
 .blog__position{
@@ -57,13 +59,21 @@
 .a--title{
     color: black;
     font-weight: bold;
+    text-decoration: none;
+}
+
+.a--title:hover{
+    color: #FFC700;
 }
 
 .readmore{
     color: black;
 }
+.readmore:hover{
+    color: #FFC700;
+}
 .content__underline{
-    text-decoration: underline; 
+    text-decoration: none; 
     margin-left: 15px;
 }
 .post-time {
@@ -81,8 +91,12 @@
     color: #FFC700; 
     font-size: 40px;
     font-family: 'coiny';
+    text-decoration: none;
 }
 
+.title-head:hover{
+    color: black;
+}
 .loop-blog{
     display: flex;
     margin-bottom: 40px;
@@ -98,7 +112,9 @@
 }
 .btn-transition {
     margin-bottom: 20px;
+    text-decoration: none;
 }
+
 .btn__margin--top{
     margin-top: 30px;
 }
@@ -112,6 +128,7 @@
     margin-bottom: 80px;
     margin-left: 5px;
 }
+
 
 @media (max-width: 1000px){
     *{
