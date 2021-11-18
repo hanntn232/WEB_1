@@ -262,7 +262,7 @@ function giamSoLuong(itemGioHang){
 
 //------------------TÍNH TỔNG GIÁ TRỊ ĐƠN HÀNG------------------
 function tinhTongGiaTriDonHang(idGioHang){
-    var danhSachItemGioHang = JSON.parse(localStorage.getItem('danhSachItemGioHang-'+idGioHang));
+    var danhSachItemGioHang = JSON.parse(localStorage.getItem('danhSachItemGioHang_'+idGioHang));
     var tongTien = 0;
     for(var i=0; i<danhSachItemGioHang.length; i++){
         tongTien+= danhSachItemGioHang[i].giaBan*danhSachItemGioHang[i]*soLuong;
