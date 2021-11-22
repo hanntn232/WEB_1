@@ -50,20 +50,25 @@ form>*{
     text-align: center;
 }
 
+.input{
+    padding: 5px 10px;
+}
 /* Định dạng button */
-.btn--dangky>button{
+.btn--dangky>input{
     border: 1px solid #FFC700;
     background-color: #FFC700;
     width: 150px;
     padding: 5px 10px;
     border-radius: 5px;
 }
-.btn--dangky>button:hover{
+.btn--dangky>input:hover{
     background-color: #FFD541;
     border: 1px solid #FFC700;
 }
-.btn--dangky>button:focus{
+.btn--dangky>input:focus{
     box-shadow: none !important;
+    background-color: #FFD541;
+    border: 1px solid #FFC700;
 }
 
 .btn--google{
@@ -92,7 +97,7 @@ a, a:hover, a:visited{
     .btn--google{
         font-size: 15px;
     }
-    .btn--dangky>button{
+    .btn--dangky> input{
         font-size: 15px;
         width: 100px;
     }

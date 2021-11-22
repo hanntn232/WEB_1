@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../CSS/Bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/Font-awesome/css/all.min.css">
     <link rel="stylesheet" href="../CSS/Dang_nhap.css">
+    <script src="../JS/dangKy - dangNhap.js"></script>
 </head>
 
 <body>
@@ -21,20 +22,18 @@
     <div class="dangnhap--container col-12">
         <div class="dangnhap--title">ĐĂNG NHẬP</div>
         <div>Nếu bạn có tài khoản, xin vui lòng đăng nhập.</div>
-        <form action="" method="get" class="col-12">
+        <form action="HOME.html" method="get" class="col-12" onsubmit="return dangNhap(sdt.value, mk.value)">
             <div class="dangnhap--sdt">
                 <label for="sdt" class="col-12">Số điện thoại <span>*</span></label>
-                <input type="text" placeholder="Số điện thoại" id="sdt" name="sdt" class="col-12">
+                <input type="text" placeholder="Số điện thoại" id="sdt" name="sdt" class="col-12 input">
             </div>
 
             <div class="dangnhap--matkhau">
                 <label for="mk" class="col-12">Mật khẩu <span>*</span></label>
-                <input type="password" placeholder="Mật khẩu" id="mk" name="mk" class="col-12">
+                <input type="password" placeholder="Mật khẩu" id="mk" name="mk" class="col-12 input">
             </div>
             <div class="btn--dangnhap center">
-                <button class="btn-primary">
-                    Đăng nhập
-                </button>
+                <input type="submit" class="btn-primary" value="Đăng nhập">
             </div>
             <div class="dangnhap--dangky">
                 Bạn chưa có tài khoản?
@@ -54,6 +53,8 @@
     <div class="frame--footer--container">
         <iframe src="Footer.html" frameborder="0" class="frame--footer" scrolling="no"></iframe>
     </div>
+    <script>
+    </script>
 </body>
 
 </html>

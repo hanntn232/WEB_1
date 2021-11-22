@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="../CSS/Font-awesome/css/all.min.css">
     <link rel="stylesheet" href="../CSS/Gio_hang.css">
     <link rel="stylesheet" href="../CSS/header.css">
-    <!-- <link rel="stylesheet" href="../CSS/Footer.css"> -->
-    <script src="../JS/sanPham.js"></script>
+    <script src="../JS/Giohang_themSP.js"></script>
+
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     </div>
 
     <!-- Giỏ hàng -->
-    <div class="giohang--bgr">
+    <div class="giohang--bgr" id="dsGioHang">
         <section class="giohang1 col-md-12 col-lg-12 col-sm-12">
             <div class="title">
                 GIỎ HÀNG CỦA BẠN
@@ -36,53 +36,59 @@
                     <div class="col-2">Thành tiền</div>
                     <div class="col-1">Xóa</div>
                 </div>
-                <div class="giohang--item">
-                    <div class="giohang--anhsp col-2">
-                        <img src="../Image/sanpham.PNG" alt="sanpham">
-                    </div>
-                    <div class="tensp col-3">
-                        <a href="#">Thức ăn hạt mềm cho chó Zenith</a><br>
-                        <span class="tensp--type">300g / Nhỏ</span>
-                    </div>
-                    <div class="giohang--dongia col-2">
-                        <p>
-                            300<span>.000 đ</span>
-                        </p>
-                    </div>
-                    <div class="giohang--soluong col-2">
+                <div id="giohang1">
+                    <div class="giohang--item">
+                        <div class="giohang--anhsp col-2">
+                            <img src="../Image/sanpham.PNG" alt="sanpham">
+                        </div>
+                        <div class="tensp col-3">
+                            <a href="#">Thức ăn hạt mềm cho chó Zenith</a><br>
+                            <span class="tensp--type">300g / Nhỏ</span>
+                        </div>
+                        <div class="giohang--dongia col-2">
+                            <p>
+                                300<span>.000 đ</span>
+                            </p>
+                        </div>
+                        <div class="giohang--soluong col-2">
 
-                        <button class="fas fa-minus btn-giam"></button>
-                        <span class="soluong">1</span>
-                        <button class="fas fa-plus btn-tang"></button>
-                    </div>
-                    <div class="giohang--thanhtien col-2">
-                        <p>
-                            300<span>.000 đ</span>
-                        </p>
-                    </div>
-                    <div class="giohang--xoa col-1">
-                        <button class="far fa-trash-alt btn-xoa"></button>
+                            <button class="fas fa-minus btn-giam"></button>
+                            <span class="soluong">1</span>
+                            <button class="fas fa-plus btn-tang"></button>
+                        </div>
+                        <div class="giohang--thanhtien col-2">
+                            <p>
+                                300<span>.000 đ</span>
+                            </p>
+                        </div>
+                        <div class="giohang--xoa col-1">
+                            <button class="far fa-trash-alt btn-xoa"></button>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row giohang--pttt">
-                <div class="col-lg-4 col-md-4 bold">
+                <div class="col-4 bold">
                     <div>Phương thức thanh toán</div>
                     <div class="input--cod">
-                        <input type="radio" value="COD"> Thanh toán khi giao hàng
+                        <input type="radio" value="COD" checked> Thanh toán khi giao hàng
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 bold">
-                    <div class="tongtien">Tổng tiền: <span>300</span><span>.000 đ</span></div>
+                    <div class="tongtien">Tổng tiền: <span id="tongtien1">300</span><span>.000 đ</span></div>
                 </div>
             </div>
 
             <div class="row giohang1--footer col-12">
                 <div class="col-4 bold">
-                    <button class="btn-tieptucmuahang">Tiếp tục mua hàng</button>
+                    <a href="../HTML/Product.html">
+                        <button class="btn-tieptucmuahang">Tiếp tục mua hàng</button>
+                    </a>
                 </div>
                 <div class="col-4 bold">
-                    <button class="btn-tienhanhdathang">Tiến hành đặt hàng</button>
+                    <a href="../HTML/Dat_hang.html">
+                        <button class="btn-tienhanhdathang">Tiến hành đặt hàng</button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -92,48 +98,50 @@
                 GIỎ HÀNG CỦA BẠN
             </div>
             <div class="giohang--container">
-                <div class="giohang--item">
-                    <div class="giohang--anhsp">
-                        <img src="../Image/sanpham.PNG" alt="sanpham">
-                    </div>
-                    <div class="item--group1">
-                        <div class="tensp">
-                            <a href="#">Thức ăn hạt mềm cho chó Zenith</a>
-                            <span class="tensp--type">300g / Nhỏ</span>
+                <div id="giohang2">
+                    <div class="giohang--item">
+                        <div class="giohang--anhsp">
+                            <img src="../Image/sanpham.PNG" alt="sanpham">
                         </div>
-                        <div class="giohang--dongia">
-                            <span style="float: left;">Giá:&nbsp;</span>
-                            <p>
-                                300<span>.000 đ</span>
-                            </p>
+                        <div class="item--group1">
+                            <div class="tensp">
+                                <a href="#">Thức ăn hạt mềm cho chó Zenith</a>
+                                <span class="tensp--type">300g / Nhỏ</span>
+                            </div>
+                            <div class="giohang--dongia">
+                                <span style="float: left;">Giá:&nbsp;</span>
+                                <p>
+                                    300<span>.000 đ</span>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="item--group2">
-                        <div class="giohang--soluong">
-                            <button class="fas fa-minus btn-giam"></button>
-                            <span class="soluong">1</span>
-                            <button class="fas fa-plus btn-tang"></button>
-                        </div>
-                        <div class="giohang--thanhtien">
-                            <div>Thành tiền:</div>
-                            <p>
-                                300<span>.000 đ</span>
-                            </p>
-                        </div>
-                        <div class="giohang--xoa">
-                            <button class="btn-xoa">Xóa</button>
+                        <div class="item--group2">
+                            <div class="giohang--soluong">
+                                <button class="fas fa-minus btn-giam"></button>
+                                <span class="soluong">1</span>
+                                <button class="fas fa-plus btn-tang"></button>
+                            </div>
+                            <div class="giohang--thanhtien">
+                                <div>Thành tiền:</div>
+                                <p>
+                                    300<span>.000 đ</span>
+                                </p>
+                            </div>
+                            <div class="giohang--xoa">
+                                <button class="btn-xoa">Xóa</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="giohang2--footer">
                 <div class="col-sm-12 col-xs-12 bold">
-                    <div class="tongtien">Tổng tiền: <span>300</span><span>.000 đ</span></div>
+                    <div class="tongtien">Tổng tiền: <span id="tongtien2">300</span><span>.000 đ</span></div>
                 </div>
                 <div class="col-sm-12 col-xs-12 bold pttt">
                     <div>Phương thức thanh toán</div>
                     <div class="input--cod">
-                        <input type="radio" value="COD"> Thanh toán khi giao hàng
+                        <input type="radio" value="COD" checked> Thanh toán khi giao hàng
                     </div>
                 </div>
                 <div class="col-sm-12 col-xs-12 bold btn-center">
@@ -152,10 +160,22 @@
     </div>
 
 
-
-    <!-- Test thẻ script -->
     <script>
+        //Lấy id Giỏ hàng của khách hàng
+        var idGioHang = layIdGioHang();
+
+        document.getElementById('giohang1').innerHTML = hienThiDanhSachItemGioHang_Desktop(idGioHang);
+        
+
+        document.getElementById('giohang2').innerHTML = hienThiDanhSachItemGioHang_Mobile(idGioHang);
+        
+
+        //Hiển thị tổng giá trị đơn hàng
+        document.getElementById('tongtien1').innerHTML = (tinhTongGiaTriDonHang(idGioHang)/1000);
+
+        document.getElementById('tongtien2').innerHTML = (tinhTongGiaTriDonHang(idGioHang)/1000);
     </script>
+
 </body>
 
 </html>

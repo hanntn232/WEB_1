@@ -26,6 +26,9 @@
 form>*{
     margin-bottom: 20px;
 }
+.input{
+    padding: 5px 10px;
+}
 .dangnhap--matkhau>label, .dangnhap--sdt>label, .dangnhap--google>label{
     margin-bottom: 10px;
 }
@@ -51,19 +54,21 @@ form>*{
 }
 
 /* Định dạng button */
-.btn--dangnhap>button{
+.btn--dangnhap>input{
     border: 1px solid #FFC700;
     background-color: #FFC700;
     width: 150px;
     padding: 5px 10px;
     border-radius: 5px;
 }
-.btn--dangnhap>button:hover{
+.btn--dangnhap>input:hover{
     background-color: #FFD541;
     border: 1px solid #FFC700;
 }
-.btn--dangnhap>button:focus{
+.btn--dangnhap>input:focus{
     box-shadow: none !important;
+    background-color: #FFD541;
+    border: 1px solid #FFC700;
 }
 
 .btn--google{
