@@ -15,6 +15,7 @@
     margin-bottom: 20px;
     width: 100%;
     padding-left: 10px;
+    min-width: 1000px;
 }
 .donhang--container>.donhang--title{
     margin: auto;
@@ -38,7 +39,7 @@
     height: 100%;
     z-index: 10;
     background-color: rgba(0, 0, 0,0.5);
-    /* display: none; */
+    display: none;
 }
 .pop-up-content{
     width: 50%;
