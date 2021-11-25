@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../CSS/Font-awesome/css/all.min.css">
+    <script src="../JS/Giohang_themSP.js"></script>
 </head>
 
 <body>
@@ -65,13 +66,13 @@
                         <div class="home-product-item__sl">
                             <label class="home-product-item__label"> Số lượng:</label>
                             <input class="home-product-item__input" value="1" type="number" id="quantity"
-                                name="quantity" />
+                                name="quantity" min="1" />
 
                         </div>
                         <div class="home-product-item__buy">
-                            <a href="Gio_hang.html"><button class="home-product-item__buy btn-mua">MUA NGAY</button>
+                            <a href="../HTML/Gio_hang.html"><button class="home-product-item__buy btn-mua">MUA NGAY</button>
                             </a>
-                            <a href=""><button class="home-product-item__buy btn-them">THÊM VÀO GIỎ HÀNG</button></a>
+                            <a href=""><button class="home-product-item__buy btn-them" onclick="them()">THÊM VÀO GIỎ HÀNG</button></a>
                         </div>
                     </div>
                 </div>
@@ -90,7 +91,8 @@
                         Nhỏ dung dịch lên miếng bông gòn sạch và nhẹ nhàng lau khu vực có vết bẩn. <br>
                         - Sử dụng miếng bông gòn khác nhau cho mỗi mắt. <br>
                         - Sau đó dùng bông gòn khô lau lại để hấp thụ hết dung dịch. <br>
-                        - Để loại bỏ vết bẩn cứng đầu: sử dụng sản phẩm tối đa 3 lần/1 ngày và liên tục trong ít nhất 1 tuần để nhận được kết quả mong muốn. <br>
+                        - Để loại bỏ vết bẩn cứng đầu: sử dụng sản phẩm tối đa 3 lần/1 ngày và liên tục trong ít nhất 1
+                        tuần để nhận được kết quả mong muốn. <br>
                         - Để ngăn ngừa hình thành vết bẩn: sử dụng sản phẩm 1 - 2 lần / 1 tuần.
                     </div>
                 </div>
@@ -171,6 +173,25 @@
         <div class="frame--footer--container">
             <iframe src="../HTML/Footer.html" frameborder="0" class="frame--footer" scrolling="no"></iframe>
         </div>
+        <script>
+            function them() {
+                //Lấy id Giỏ hàng của khách hàng
+                var idGioHang = layIdGioHang();
+
+
+                //Lấy danh sách item giỏ hàng của khách hàng từ local storage
+                var danhSachItemGioHang = layDanhSachItemGioHang(idGioHang);
+
+                //Tạo đối tượng item giỏ hàng
+                var itemGioHang = taoDoiTuongItemGioHang(idGioHang, '74442428_1636817383654', quantity.value);
+
+                //Thêm vào giỏ hàng
+                themSanPhamVaoGioHang(itemGioHang);
+
+                alert('Thêm sản phẩm vào giỏ hàng thành công!')
+            }
+
+        </script>
     </div>
 </body>
 

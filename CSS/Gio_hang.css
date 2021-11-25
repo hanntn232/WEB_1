@@ -72,7 +72,8 @@ section.giohang1{
 
 /* Quy định kích thước ảnh */
 .giohang--anhsp>img{
-    height: 90%;
+    height: 130px;
+    margin-top: 30px;
 }
 .giohang--anhsp{
     padding: 5px 10px !important;
@@ -153,6 +154,14 @@ a:visited{
     justify-content: space-between;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.row.giohang1--footer>div:nth-of-type(2){
+    padding-right: 0px;
+    text-align: right;
+    margin-right: -20px;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: flex-end; */
 }
 .btn-tieptucmuahang{
     border: 1px solid #ABAAAA;
@@ -238,8 +247,9 @@ a:visited{
 
    /* Quy định kích thước ảnh */
     .giohang--anhsp>img{
-        height: 60%;
+        height: 70%;
         padding-left: 20px;
+        margin-top: 5px;
     }
     .giohang--anhsp{
         padding: 10px 0px !important;
