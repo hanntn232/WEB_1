@@ -211,6 +211,7 @@
     display: flex;
     justify-content: space-evenly;
 }
+
 .web--content{
     text-align: center;
 }
@@ -221,14 +222,23 @@
 .web--dog{
     text-align: center;
     display: block;
+    
+}
+p>a{
+    text-decoration: none;
+    color: black;
+}
+p>a:hover{
+
+    color: #FFC700;
 }
 .web--cat{
     text-align: center;
+    display: block;
 }
 .web--dog img{
     height: 300px;
     width: 300px;
-    
 }
 .web--cat img{
     height: 300px;
@@ -264,7 +274,10 @@
     margin-right: 10px;
     text-align: center;
     margin-left: 10px;
-    
+}
+.special--product--detail:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05) ;
 }
 .special--product--item{
     display: flex;
@@ -337,12 +350,22 @@
     text-align: center;
     margin: auto;
 }
-
+button>a{
+    text-decoration: none;
+    color: black;
+}
+button>a:hover{
+    color: blue;
+}
 .special--product--detail1{
     background-color: white;
     border-radius: 10px;
     margin-right: 10px;
     text-align: center;
+}
+.special--product--detail1:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05) ;
 }
 .web--fashion--rectangle .button--more{
     text-align: center;
@@ -404,7 +427,6 @@
 .web--fashion--rectangle{
     height: auto;
     align-items: center;
-    
 }
 .web__button--fashion{
     height: 40px;
@@ -414,7 +436,10 @@
     border-radius: 10px;
     color: white;
 }
-
+.special--product--detail2:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05);
+}
 
 /* blog */
 .web--blog--pet{
@@ -455,7 +480,7 @@
 }
 .web--blog--imgcun{
     width: 80%;
-    border-radius: 3%;
+    border-radius: 10px;
     height: 200px;
     
 }
@@ -473,7 +498,7 @@
     background-color: white;
     margin-left: 3%;
     margin-right: 3%;
-    border-radius: 3%;
+    border-radius: 10px;
 }
 .web--blog--bottom{
     display: flex;
@@ -482,7 +507,10 @@
     max-width: 100%;
     color: black;
 }
-
+.web--blog--item:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05);
+}
 .web--blog--headercontent{
     margin-left: 10%;
     margin-right: 10%;
@@ -511,20 +539,20 @@
 
 /*  */
 .more--floatright{
-    float: right;
+    text-align: right;
     margin-right: 50px;
-    margin-top: -50px;
 }
 .web__button--floatright{
     border-radius: 10px;
+    border:1px;
     background-color: #FEF8E1;
-    border:1px
 }
 .web--whychoose{
     /* margin-top: 300px; */
     background-color: #FBE89E;
     width: 100%;
     padding-top: 20px;
+    
 }
 .web--whychoose--content{
     margin-left: 30px;
