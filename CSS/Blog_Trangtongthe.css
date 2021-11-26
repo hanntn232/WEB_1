@@ -24,7 +24,7 @@
 
 .img-responsive{
     width: 100%;
-    border-radius: 3%;
+    border-radius: 30px;
     text-decoration: none;
 }
 
@@ -41,7 +41,7 @@
     background-color: white;
     margin-left: 3%;
     margin-right: 3%;
-    border-radius: 3%;
+    border-radius: 30px;
 }
 .blog_bottom{
     display: flex;
@@ -181,7 +181,7 @@
         background-color: white;
         margin-left: 3%;
         margin-right: 3%;
-        border-radius: 3%;
+        border-radius: 20px;
     }
     .page__bg{
         min-width: 300px;
