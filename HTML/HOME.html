@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../CSS/home.css">
     <link rel="stylesheet" href="../CSS/Bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/Font-awesome/css/all.css">
+    
 
 </head>
 <body>
@@ -115,11 +116,11 @@
             <div class="web--dogcat--detail">
                 <div class="web--dog">
                     <img src="../Image/dogava.jpg" class="rounded-circle" alt="">
-                    <p>Dành cho chó cưng</p>
+                    <p><a href="../HTML/Product.html">Dành cho chó cưng</a></p>
                 </div>
                 <div class="web--cat">
                     <img src="../Image/catava.jpg" class="rounded-circle" alt="">
-                    <p>Dành cho mèo yêu</p>
+                    <p><a href="../HTML/Product.html">Dành cho mèo yêu</a></p>
                 </div>
             </div>
         </div>
@@ -192,8 +193,6 @@
                         </div>
                     </div>
                 </div>
-                
-                
             </div>
         </div>
         <!-- bé yêu ăn gì -->
@@ -266,7 +265,7 @@
                 </div>
             </div>
             <div class="button--more">
-                <button type="button" class="web__button--eatdogcat" name="more" >XEM THÊM</button>
+                <button type="button" class="web__button--eatdogcat" name="more"><a href="../HTML/Product.html">XEM THÊM</a></button>
             </div>
         </div>
         <!-- 50% sale off -->
@@ -319,7 +318,7 @@
                 
                 </div>
             <div class="button--more">
-                <button type="button" class="web__button--fashion" name="more1" >XEM THÊM</button>
+                <button type="button" class="web__button--fashion" name="more1" ><a href="../HTML/Product.html">XEM THÊM</a></button>
             </div>
         </div>
         <!-- TIN THÚ CƯNG -->
@@ -333,8 +332,7 @@
                         <div class="web--blog--item">
                             <div>
                                 <div class="web--blog--header">
-                                    <a href="" title="Pate cho chó - Giải pháp chuyên trị cho chó
-                                                kén ăn">
+                                    <a href="../HTML/blog_chitiet.html" title="Pate cho chó - Giải pháp chuyên trị cho chó kén ăn">
                                         <img src="../Image/cun7.jpg" alt="Pate cho chó - Giải pháp chuyên trị cho chó
                                                     kén ăn" class="web--blog--imgcun" data-was-processed="true">
                                     </a>
@@ -370,7 +368,7 @@
                                                 <span class="web--blog--readmore">|</span>
                                             </span>
                                             <div class="blog--readmore--underline">
-                                                <a class="web--blog--readmore" href="" title="Xem tiếp">Xem tiếp</a>
+                                                <a class="web--blog--readmore" href="../HTML/blog_chitiet.html" title="Xem tiếp">Xem tiếp</a>
                                             </div>
                                         </div>
                                     </div>
@@ -384,7 +382,7 @@
                         <div class="web--blog--item">
                             <div>
                                 <div class="web--blog--header">
-                                    <a href="" title="Cách ít người biết để dạy mèo đi vệ sinh đúng chỗ">
+                                    <a href="../HTML/blog_chitiet.html" title="Cách ít người biết để dạy mèo đi vệ sinh đúng chỗ">
                                         <img src="../Image/cun1.jpg"
                                             alt="Cách ít người biết để dạy mèo đi vệ sinh đúng chỗ"
                                             class="web--blog--imgcun" data-was-processed="true">
@@ -421,7 +419,7 @@
                                                 <span class="web--blog--readmore">|</span>
                                             </span>
                                             <div class="blog--readmore--underline">
-                                                <a class="web--blog--readmore" href="" title="Xem tiếp">Xem tiếp</a>
+                                                <a class="web--blog--readmore" href="../HTML/blog_chitiet.html" title="Xem tiếp">Xem tiếp</a>
                                             </div>
                                         </div>
                                     </div>
@@ -432,7 +430,7 @@
                 </div>
             </div>
             <div class="more--floatright">
-                <button type="button" class="web__button--floatright" name="more2" >XEM THÊM BÀI VIẾT</button>
+                <button type="button" class="web__button--floatright" name="more2" ><a href="../HTML/Blog_Trangchu.html">XEM THÊM BÀI VIẾT</a></button>
             </div>
         </div>
         <div class="web--whychoose">
@@ -458,14 +456,19 @@
                 <h6>ĐĂNG KÝ ĐỂ NHẬN THÊM THÔNG TIN!</h6>
                 <p>Nhận thư mỗi tuần và mua sắm dễ dàng hơn.</p>
             </div>
-            <div class="web--register--email">
+            <form method="dialog" class="web--register--email">
                 <input type="email" class="register--email" value="" placeholder="Hãy nhập email của bạn" name="email" id="email">
-                <button type="submit" value="ĐĂNG KÝ" id="email" class="button__email">ĐĂNG KÝ</button>
-            </div>
+                <button type="submit" value="ĐĂNG KÝ" id="btnRegister" name="btnRegister" class="button__email">ĐĂNG KÝ</button>
+            </form>
         </div>
         <div class="frame--footer--container">
             <iframe src="Footer.html" frameborder="0" class="frame--footer" scrolling="no"></iframe>
         </div>
     </div>
+    <script src="../JS/register_home.js">
+
+        // var json = email.toJson;
+        // console.log(json);
+    </script>
 </body>
 </html>
