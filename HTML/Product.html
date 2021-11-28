@@ -36,7 +36,7 @@
                                     <a href="#" class="category-item__link">Trang chủ</a>
                                 </li>
                                 <li class="category-item category-item--active">
-                                    <a href="#" class="category-item__link">Sản phẩm
+                                    <a href="#" class="category-item__link" onclick="window.location.reload()">Sản phẩm
                                     </a>
                                 <li class="category-item category-item-1">
                                     <a href="#" class="category-item__link" onclick="hienDanhMucThucAnChoCho()"
@@ -47,11 +47,12 @@
                                         onclick="hienDanhMucThucAnChoMeo()">Thức ăn cho mèo</a>
                                 </li>
                                 <li class="category-item category-item-1">
-                                    <a href="#" class="category-item__link" id="category--phukienchocho" onclick="hienDanhMucPhuKienChoCho()">Phụ kiện cho
+                                    <a href="#" class="category-item__link" id="category--phukienchocho"
+                                        onclick="hienDanhMucPhuKienChoCho()">Phụ kiện cho
                                         chó</a>
                                 </li>
                                 <li class="category-item category-item-1">
-                                    <a href="#" class="category-item__link">Phụ kiện cho mèo</a>
+                                    <a href="#" class="category-item__link" id="category--phukienchomeo" onclick="hienDanhMucPhuKienChoMeo()">Phụ kiện cho mèo</a>
                                 </li>
                                 </li>
                                 <li class="category-item">
@@ -192,7 +193,10 @@
             //Danh mục thức ăn cho chó
             var dsThucAnChoCho = danhSachSanPhamTheoDanhMuc('Thức ăn cho chó');
             dsSanPham.innerHTML = hienThiSanPhamTheoTrang(1, dsThucAnChoCho);
-            document.getElementById('category--thucanchocho').focus();
+            document.getElementById('category--phukienchomeo').style.color = '#333'
+            document.getElementById('category--thucanchomeo').style.color = '#333'
+            document.getElementById('category--phukienchocho').style.color = '#333'
+            document.getElementById('category--thucanchocho').style.color = '#ffc700';
             // Sự kiện gán cho nút chuyển trang
             // Chuyển trang Desktop
             var page_1 = document.getElementById('page-1');
@@ -221,7 +225,10 @@
             //Danh mục thức ăn cho mèo
             var dsThucAnChoMeo = danhSachSanPhamTheoDanhMuc('Thức ăn cho mèo');
             dsSanPham.innerHTML = hienThiSanPhamTheoTrang(1, dsThucAnChoMeo);
-            document.getElementById('category--thucanchomeo').focus();
+            document.getElementById('category--thucanchocho').style.color = '#333'
+            document.getElementById('category--phukienchomeo').style.color = '#333'
+            document.getElementById('category--phukienchocho').style.color = '#333'
+            document.getElementById('category--thucanchomeo').style.color = '#ffc700';
             // Sự kiện gán cho nút chuyển trang
             // Chuyển trang Desktop
             var page_1 = document.getElementById('page-1');
@@ -245,11 +252,14 @@
         }
 
         //--Hiện danh mục phụ kiện cho chó
-        function hienDanhMucPhuKienChoCho(){
+        function hienDanhMucPhuKienChoCho() {
             //Danh mục phụ kiện cho chó
             var dsPhuKienChoCho = danhSachSanPhamTheoDanhMuc('Phụ kiện cho chó');
             dsSanPham.innerHTML = hienThiSanPhamTheoTrang(1, dsPhuKienChoCho);
-            document.getElementById('category--phukienchocho').focus();
+            document.getElementById('category--thucanchocho').style.color = '#333'
+            document.getElementById('category--thucanchomeo').style.color = '#333'
+            document.getElementById('category--phukienchomeo').style.color = '#333'
+            document.getElementById('category--phukienchocho').style.color = '#ffc700';
             // Sự kiện gán cho nút chuyển trang
             // Chuyển trang Desktop
             var page_1 = document.getElementById('page-1');
@@ -272,8 +282,38 @@
             })
         }
 
-        //Danh mục phụ kiện cho mèo
-        var dsPhuKienChoMeo = danhSachSanPhamTheoDanhMuc('Phụ kiện cho mèo');
+
+        //--Hiện danh mục phụ kiện cho chó
+        function hienDanhMucPhuKienChoMeo() {
+            //Danh mục phụ kiện cho mèo
+            var dsPhuKienChoMeo = danhSachSanPhamTheoDanhMuc('Phụ kiện cho mèo');
+            dsSanPham.innerHTML = hienThiSanPhamTheoTrang(1, dsPhuKienChoMeo);
+            document.getElementById('category--thucanchocho').style.color = '#333'
+            document.getElementById('category--thucanchomeo').style.color = '#333'
+            document.getElementById('category--phukienchocho').style.color = '#333'
+            document.getElementById('category--phukienchomeo').style.color = '#ffc700';
+            // Sự kiện gán cho nút chuyển trang
+            // Chuyển trang Desktop
+            var page_1 = document.getElementById('page-1');
+            var page_2 = document.getElementById('page-2');
+            var page_3 = document.getElementById('page-3');
+            //--Page-1
+            page_1.addEventListener('click', function () {
+                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
+                dsSanPham.innerHTML = hienThiSanPhamTheoTrang(1, dsPhuKienChoMeo);
+            })
+            //--Page-2
+            page_2.addEventListener('click', function () {
+                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
+                dsSanPham.innerHTML = hienThiSanPhamTheoTrang(2, dsPhuKienChoMeo);
+            })
+            //--Page-3
+            page_3.addEventListener('click', function () {
+                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
+                dsSanPham.innerHTML = hienThiSanPhamTheoTrang(3, dsPhuKienChoMeo);
+            })
+        }
+
 
     </script>
 
