@@ -101,7 +101,7 @@ function hienThiSanPhamTheoTrang(trang, danhSachSanPham) {
 
 //Hàm tạo mảng danh sách sản phẩm theo danh mục
 function danhSachSanPhamTheoDanhMuc(danhMuc) {
-    danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
+    danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
     var dsSanPhamTheoDanhMuc = new Array();
     for (var i = 0; i < danhSachSanPham.length; i++) {
         if (danhSachSanPham[i].danhMuc == danhMuc) {
@@ -112,18 +112,21 @@ function danhSachSanPhamTheoDanhMuc(danhMuc) {
 }
 
 //Sắp xếp sản phẩm giá tăng dần
-function sapXepGiaTangDan(danhSachSanPham){
+function sapXepGiaTangDan(danhSachSanPham) {
     var danhSachSanPhamGiaTangDan = new Array();
     var mangGiaTangDan = new Array();
-    for(var i=0; i<danhSachSanPham.length; i++){
+    for (var i = 0; i < danhSachSanPham.length; i++) {
         mangGiaTangDan.push(danhSachSanPham[i].giaBan);
     }
-    mangGiaTangDan.sort(function(a,b){return b-a});
-    for(var i=0; i<mangGiaTangDan.length; i++){
-        for(var j = 0; j<danhSachSanPham.length;j++){
-            if(danhSachSanPham[j].giaBan == mangGiaTangDan[i]){
-                danhSachSanPhamGiaTangDan.push(danhSachSanPham[j]);
-                break;
+    mangGiaTangDan.sort(function (a, b) { return a - b });
+    for (var i = 0; i < mangGiaTangDan.length; i++) {
+        for (var j = 0; j < mangGiaTangDan.length; j++) {
+            if (danhSachSanPham[j] != null) {
+                if (danhSachSanPham[j].giaBan == mangGiaTangDan[i]) {
+                    danhSachSanPhamGiaTangDan.push(danhSachSanPham[j]);
+                    danhSachSanPham.splice(j, 1);
+                    break;
+                }
             }
         }
     }
@@ -131,18 +134,21 @@ function sapXepGiaTangDan(danhSachSanPham){
 }
 
 //Sắp xếp sản phẩm giá giảm dần
-function sapXepGiaGiamDan(danhSachSanPham){
+function sapXepGiaGiamDan(danhSachSanPham) {
     var danhSachSanPhamGiaGiamDan = new Array();
     var mangGiaGiamDan = new Array();
-    for(var i=0; i<danhSachSanPham.length; i++){
+    for (var i = 0; i < danhSachSanPham.length; i++) {
         mangGiaGiamDan.push(danhSachSanPham[i].giaBan);
     }
-    mangGiaGiamDan.sort(function(a,b){return a-b});
-    for(var i=0; i<mangGiaGiamDan.length; i++){
-        for(var j = 0; j<danhSachSanPham.length;j++){
-            if(danhSachSanPham[j].giaBan == mangGiaGiamDan[i]){
-                danhSachSanPhamGiaGiamDan.push(danhSachSanPham[j]);
-                break;
+    mangGiaGiamDan.sort(function (a, b) { return b - a });
+    for (var i = 0; i < mangGiaGiamDan.length; i++) {
+        for (var j = 0; j < mangGiaGiamDan.length; j++) {
+            if (danhSachSanPham[j] != null) {
+                if (danhSachSanPham[j].giaBan == mangGiaGiamDan[i]) {
+                    danhSachSanPhamGiaGiamDan.push(danhSachSanPham[j]);
+                    danhSachSanPham.splice(j, 1);
+                    break;
+                }
             }
         }
     }
@@ -151,19 +157,45 @@ function sapXepGiaGiamDan(danhSachSanPham){
 
 
 
+//-----------CHUYỂN TRANG MOBILE
+//Hàm đếm số lần lặp lại của chuỗi home-product-item__name trong html (cho biết có bao nhiêu sản phẩm hiện đang hiển thị)
+function demSoSanPhamHienThi(chuoiHTML) {
+    var soLanXuatHien = (chuoiHTML.match(/home-product-item__name/g)).length;
+    return soLanXuatHien;
+}
 
-
-
-
-
-
-
-
-
+function xemThem() {
+    var htmlDanhSachSanPham = document.getElementById('dsSanPham2').innerHTML;
+    var soLanXuatHien = demSoSanPhamHienThi(htmlDanhSachSanPham)
+    var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+    if (soLanXuatHien < danhSachSanPham.length) {
+        var trangHienTai = Math.floor(soLanXuatHien / 15);
+        htmlDanhSachSanPham += hienThiSanPhamTheoTrang(trangHienTai + 1, danhSachSanPham);
+        document.getElementById('dsSanPham2').innerHTML = htmlDanhSachSanPham;
+        if (Math.floor((danhSachSanPham.length - soLanXuatHien) / 15) <= 1) {
+            document.getElementById('xemthem').style.display = "none";
+        }
+    }
+    else {
+        document.getElementById('xemthem').style.display = "none";
+    }
+}
+function kiemTraXemThem(danhSachSanPham) {
+    if (window.matchMedia('(max-device-width: 739px)').matches) {
+        var htmlDanhSachSanPham = document.getElementById('dsSanPham2').innerHTML;
+        var soLanXuatHien = demSoSanPhamHienThi(htmlDanhSachSanPham)
+        if (soLanXuatHien == danhSachSanPham.length) {
+            document.getElementById('xemthem').style.display = "none";
+        }
+        else {
+            document.getElementById('xemthem').style.display = "block";
+        }
+    }
+}
 
 
 //-------------------CSS nav mobile-----------------
-function removeChecked(){
+function removeChecked() {
     var nav_mobile_input = document.getElementById('nav-mobile-input');
     nav_mobile_input.checked = false;
 };

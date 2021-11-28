@@ -36,7 +36,7 @@
                                     <a href="HOME.html" class="category-item__link">Trang chủ</a>
                                 </li>
                                 <li class="category-item category-item--active">
-                                    <a href="#" class="category-item__link" onclick="window.location.reload()">Sản phẩm
+                                    <a href="#category-item" class="category-item__link" id="sanpham-category">Sản phẩm
                                     </a>
                                 <li class="category-item category-item-1">
                                     <a href="#category-item" class="category-item__link"
@@ -75,39 +75,50 @@
                                 <!-- List options -->
                                 <ul class="select-input__list">
                                     <li class="select-input__item">
-                                        <a href="#" class="select-input__link tangdan" id="tangdan">Giá: tăng dần</a>
+                                        <a href="#category-item" class="select-input__link tangdan" id="tangdan">Giá:
+                                            tăng dần</a>
                                     </li>
                                     <li class="select-input__item">
-                                        <a href="#" class="select-input__link giamdan">Giá giảm dần</a>
+                                        <a href="#category-item" class="select-input__link" id="giamdan">Giá giảm
+                                            dần</a>
                                     </li>
                                 </ul>
                             </div>
 
                         </div>
                         <!-- Grid -> Row -> Column -->
-                        <div class="home-product">
-                            <div class="row" id="dsSanPham">
+                        <div class="home-product dsSanPham1">
+                            <div class="row" id="dsSanPham1">
                             </div>
-
+                        </div>
+                        <div class="home-product dsSanPham2">
+                            <div class="row" id="dsSanPham2">
+                            </div>
                         </div>
                         <ul class="pagination home-product__pagination">
 
                             <li class="pagination-item pagination-item--active">
-                                <a href="#" class="pagination-item__link " id="page-1">1</a>
+                                <a href="#category-item" class="pagination-item__link " id="page-1">1</a>
                             </li>
                             <li class="pagination-item">
-                                <a href="#" class="pagination-item__link " id="page-2">2</a>
+                                <a href="#category-item" class="pagination-item__link " id="page-2">2</a>
                             </li>
                             <li class="pagination-item">
-                                <a href="#" class="pagination-item__link " id="page-3">3</a>
+                                <a href="#category-item" class="pagination-item__link " id="page-3">3</a>
                             </li>
                             <li class="pagination-item">
-                                <span href="#" class="pagination-item__link ">
+                                <span href="#category-item" class="pagination-item__link ">
                                     <i class="pagination-item_icon fas fa-angle-right" id="next"></i>
                                 </span>
                             </li>
                         </ul>
-
+                        <div class="xemthem" id="xemthem">
+                            <div id="more" onclick="xemThem()">
+                                <span>
+                                    Xem thêm <i class="select-input__icon fas fa-angle-down"></i>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,19 +141,20 @@
                         <a href="HOME.html" class="nav__mobile-item__link">Trang chủ</a>
                     </li>
                     <li class="nav__mobile-item nav__mobile-item--active">
-                        <a href="#" class="nav__mobile-item__link">Sản phẩm
+                        <a href="#category-item" class="nav__mobile-item__link" id="sanpham-category2">Sản phẩm
                         </a>
                     <li class="nav__mobile-item nav__mobile-item-1">
-                        <a href="#" class="nav__mobile-item__link">Thức ăn cho chó</a>
+                        <a href="#category-item" class="nav__mobile-item__link" id="thucanchocho2"
+                            onclick="hienDanhMucThucAnChoCho_Mobile(),removeChecked()">Thức ăn cho chó</a>
                     </li>
                     <li class="nav__mobile-item nav__mobile-item-1">
-                        <a href="#" class="nav__mobile-item__link">Thức ăn cho mèo</a>
+                        <a href="#category-item" class="nav__mobile-item__link" id="thucanchomeo2" onclick="hienDanhMucThucAnChoMeo_Mobile(),removeChecked()">Thức ăn cho mèo</a>
                     </li>
                     <li class="nav__mobile-item nav__mobile-item-1">
-                        <a href="#" class="nav__mobile-item__link">Phụ kiện cho chó</a>
+                        <a href="#category-item" class="nav__mobile-item__link" id="phukienchocho2" onclick="hienDanhMucPhuKienChoCho_Mobile(),removeChecked()">Phụ kiện cho chó</a>
                     </li>
                     <li class="nav__mobile-item nav__mobile-item-1">
-                        <a href="#" class="nav__mobile-item__link">Phụ kiện cho mèo</a>
+                        <a href="#category-item" class="nav__mobile-item__link" id="phukienchomeo2" onclick="hienDanhMucPhuKienChoMeo_Mobile(),removeChecked()">Phụ kiện cho mèo</a>
                     </li>
                     </li>
                     <li class="nav__mobile-item">
@@ -161,19 +173,30 @@
     </div>
     <script>
         //Load sản phẩm trang 1 khi mở trang lên
-        // if (localStorage.getItem('danhSachSanPhamTam') == null) {
-        //     var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-        //     var jsondanhSachSanPham = JSON.stringify(danhSachSanPham);
-        //     localStorage.setItem('danhSachSanPhamTam', jsondanhSachSanPham);
-        // }
-        var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-        var jsondanhSachSanPham = JSON.stringify(danhSachSanPham);
-        localStorage.setItem('danhSachSanPhamTam', jsondanhSachSanPham);
+        if (JSON.parse(localStorage.getItem('danhSachSanPhamTam')) == null) {
+            var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
+            var jsondanhSachSanPham = JSON.stringify(danhSachSanPham);
+            localStorage.setItem('danhSachSanPhamTam', jsondanhSachSanPham);
+        }
+
+        var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+        //Hiển thị 15 sản phẩm đầu desktop
+        var dsSanPham1 = document.getElementById('dsSanPham1');
+        dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(1, danhSachSanPham);
+        //Hiển thị 15 sản phẩm đầu Mobile
+        var dsSanPham2 = document.getElementById('dsSanPham2');
+        dsSanPham2.innerHTML = hienThiSanPhamTheoTrang(1, danhSachSanPham);
+        kiemTraXemThem(danhSachSanPham);
+
 
         //Lấy sản phẩm từ danh sách tạm
-        var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
-        var dsSanPham = document.getElementById('dsSanPham');
-        dsSanPham.innerHTML = hienThiSanPhamTheoTrang(1, danhSachSanPham);
+        // var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+        // var dsSanPham = document.getElementById1');
+
+
+        //-------------------------------------------------------
+
+
 
         // Sự kiện gán cho nút chuyển trang
         // Chuyển trang Desktop
@@ -182,25 +205,25 @@
         var page_3 = document.getElementById('page-3');
         //--Page-1
         page_1.addEventListener('click', function () {
-            var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-            dsSanPham.innerHTML = hienThiSanPhamTheoTrang(1, danhSachSanPham);
+            var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+            dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(1, danhSachSanPham);
         })
         //--Page-2
         page_2.addEventListener('click', function () {
-            var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-            dsSanPham.innerHTML = hienThiSanPhamTheoTrang(2, danhSachSanPham);
+            var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+            dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(2, danhSachSanPham);
         })
         //--Page-3
         page_3.addEventListener('click', function () {
-            var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-            dsSanPham.innerHTML = hienThiSanPhamTheoTrang(3, danhSachSanPham);
+            var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+            dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(3, danhSachSanPham);
         })
 
         //--Hiện danh mục thức ăn cho chó
         function hienDanhMucThucAnChoCho() {
             //Danh mục thức ăn cho chó
             var dsThucAnChoCho = danhSachSanPhamTheoDanhMuc('Thức ăn cho chó');
-            dsSanPham.innerHTML = hienThiSanPhamTheoTrang(1, dsThucAnChoCho);
+            dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(1, dsThucAnChoCho);
             document.getElementById('category--phukienchomeo').style.color = '#333'
             document.getElementById('category--thucanchomeo').style.color = '#333'
             document.getElementById('category--phukienchocho').style.color = '#333'
@@ -212,18 +235,18 @@
             var page_3 = document.getElementById('page-3');
             //--Page-1
             page_1.addEventListener('click', function () {
-                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-                dsSanPham.innerHTML = hienThiSanPhamTheoTrang(1, dsThucAnChoCho);
+                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+                dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(1, dsThucAnChoCho);
             })
             //--Page-2
             page_2.addEventListener('click', function () {
-                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-                dsSanPham.innerHTML = hienThiSanPhamTheoTrang(2, dsThucAnChoCho);
+                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+                dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(2, dsThucAnChoCho);
             })
             //--Page-3
             page_3.addEventListener('click', function () {
-                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-                dsSanPham.innerHTML = hienThiSanPhamTheoTrang(3, dsThucAnChoCho);
+                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+                dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(3, dsThucAnChoCho);
             })
         }
 
@@ -232,7 +255,7 @@
         function hienDanhMucThucAnChoMeo() {
             //Danh mục thức ăn cho mèo
             var dsThucAnChoMeo = danhSachSanPhamTheoDanhMuc('Thức ăn cho mèo');
-            dsSanPham.innerHTML = hienThiSanPhamTheoTrang(1, dsThucAnChoMeo);
+            dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(1, dsThucAnChoMeo);
             document.getElementById('category--thucanchocho').style.color = '#333'
             document.getElementById('category--phukienchomeo').style.color = '#333'
             document.getElementById('category--phukienchocho').style.color = '#333'
@@ -244,18 +267,18 @@
             var page_3 = document.getElementById('page-3');
             //--Page-1
             page_1.addEventListener('click', function () {
-                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-                dsSanPham.innerHTML = hienThiSanPhamTheoTrang(1, dsThucAnChoMeo);
+                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+                dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(1, dsThucAnChoMeo);
             })
             //--Page-2
             page_2.addEventListener('click', function () {
-                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-                dsSanPham.innerHTML = hienThiSanPhamTheoTrang(2, dsThucAnChoMeo);
+                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+                dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(2, dsThucAnChoMeo);
             })
             //--Page-3
             page_3.addEventListener('click', function () {
-                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-                dsSanPham.innerHTML = hienThiSanPhamTheoTrang(3, dsThucAnChoMeo);
+                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+                dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(3, dsThucAnChoMeo);
             })
         }
 
@@ -263,7 +286,7 @@
         function hienDanhMucPhuKienChoCho() {
             //Danh mục phụ kiện cho chó
             var dsPhuKienChoCho = danhSachSanPhamTheoDanhMuc('Phụ kiện cho chó');
-            dsSanPham.innerHTML = hienThiSanPhamTheoTrang(1, dsPhuKienChoCho);
+            dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(1, dsPhuKienChoCho);
             document.getElementById('category--thucanchocho').style.color = '#333'
             document.getElementById('category--thucanchomeo').style.color = '#333'
             document.getElementById('category--phukienchomeo').style.color = '#333'
@@ -275,18 +298,18 @@
             var page_3 = document.getElementById('page-3');
             //--Page-1
             page_1.addEventListener('click', function () {
-                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-                dsSanPham.innerHTML = hienThiSanPhamTheoTrang(1, dsPhuKienChoCho);
+                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+                dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(1, dsPhuKienChoCho);
             })
             //--Page-2
             page_2.addEventListener('click', function () {
-                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-                dsSanPham.innerHTML = hienThiSanPhamTheoTrang(2, dsPhuKienChoCho);
+                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+                dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(2, dsPhuKienChoCho);
             })
             //--Page-3
             page_3.addEventListener('click', function () {
-                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-                dsSanPham.innerHTML = hienThiSanPhamTheoTrang(3, dsPhuKienChoCho);
+                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+                dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(3, dsPhuKienChoCho);
             })
         }
 
@@ -295,7 +318,7 @@
         function hienDanhMucPhuKienChoMeo() {
             //Danh mục phụ kiện cho mèo
             var dsPhuKienChoMeo = danhSachSanPhamTheoDanhMuc('Phụ kiện cho mèo');
-            dsSanPham.innerHTML = hienThiSanPhamTheoTrang(1, dsPhuKienChoMeo);
+            dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(1, dsPhuKienChoMeo);
             document.getElementById('category--thucanchocho').style.color = '#333'
             document.getElementById('category--thucanchomeo').style.color = '#333'
             document.getElementById('category--phukienchocho').style.color = '#333'
@@ -307,29 +330,79 @@
             var page_3 = document.getElementById('page-3');
             //--Page-1
             page_1.addEventListener('click', function () {
-                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-                dsSanPham.innerHTML = hienThiSanPhamTheoTrang(1, dsPhuKienChoMeo);
+                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+                dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(1, dsPhuKienChoMeo);
             })
             //--Page-2
             page_2.addEventListener('click', function () {
-                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-                dsSanPham.innerHTML = hienThiSanPhamTheoTrang(2, dsPhuKienChoMeo);
+                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+                dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(2, dsPhuKienChoMeo);
             })
             //--Page-3
             page_3.addEventListener('click', function () {
-                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-                dsSanPham.innerHTML = hienThiSanPhamTheoTrang(3, dsPhuKienChoMeo);
+                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+                dsSanPham1.innerHTML = hienThiSanPhamTheoTrang(3, dsPhuKienChoMeo);
             })
         }
 
+        //------------------------------
+        // Button sắp xếp tăng dần
         document.getElementById('tangdan').addEventListener('click', function () {
-            danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-            danhSachSanPham = sapXepGiaTangDan(danhSachSanPham);
-            localStorage.setItem('danhSachSanPhamTam', JSON.stringify(danhSachSanPham));
-        });
+            var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+            localStorage.setItem('danhSachSanPhamTam', JSON.stringify(sapXepGiaTangDan(danhSachSanPham)));
+            window.location.reload();
+        })
 
+        // Button sắp xếp giảm dần
+        document.getElementById('giamdan').addEventListener('click', function () {
+            var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+            localStorage.setItem('danhSachSanPhamTam', JSON.stringify(sapXepGiaGiamDan(danhSachSanPham)));
+            window.location.reload();
+        })
+
+
+
+        //---------------------------
+        document.getElementById('sanpham-category').addEventListener('click', function () {
+            localStorage.removeItem('danhSachSanPhamTam');
+            window.location.reload();
+        })
+
+        //-------------------MOBILE---------------------
+        //Sắp xếp theo danh mục
+        //--Hiện danh mục thức ăn cho chó
+        function hienDanhMucThucAnChoCho_Mobile() {
+            //Danh mục thức ăn cho chó
+            var dsThucAnChoCho = danhSachSanPhamTheoDanhMuc('Thức ăn cho chó');
+            dsSanPham2.innerHTML = hienThiSanPhamTheoTrang(1, dsThucAnChoCho);
+            kiemTraXemThem(dsThucAnChoCho);
+        }
+        //--Hiện danh mục thức ăn cho mèo
+        function hienDanhMucThucAnChoMeo_Mobile() {
+            //Danh mục thức ăn cho mèo
+            var dsThucAnChoMeo = danhSachSanPhamTheoDanhMuc('Thức ăn cho mèo');
+            dsSanPham2.innerHTML = hienThiSanPhamTheoTrang(1, dsThucAnChoMeo);
+            kiemTraXemThem(dsThucAnChoMeo);
+        }
+        //--Hiện danh mục phụ kiện cho chó
+        function hienDanhMucPhuKienChoCho_Mobile() {
+            //Danh mục phụ kiện cho chó
+            var dsPhuKienChoCho = danhSachSanPhamTheoDanhMuc('Phụ kiện cho chó');
+            dsSanPham2.innerHTML = hienThiSanPhamTheoTrang(1, dsPhuKienChoCho);
+            kiemTraXemThem(dsPhuKienChoCho);
+        }
+        //--Hiện danh mục phụ kiện cho mèo
+        function hienDanhMucPhuKienChoMeo_Mobile() {
+            //Danh mục phụ kiện cho mèo
+            var dsPhuKienChoMeo = danhSachSanPhamTheoDanhMuc('Phụ kiện cho mèo');
+            dsSanPham2.innerHTML = hienThiSanPhamTheoTrang(1, dsPhuKienChoMeo);
+            kiemTraXemThem(dsPhuKienChoMeo);
+        }
+        document.getElementById('sanpham-category2').addEventListener('click', function () {
+            localStorage.removeItem('danhSachSanPhamTam');
+            window.location.reload();
+        })
     </script>
-    <!-- <script src="../JS/sanPham.js"></script> -->
 </body>
 
 </html>

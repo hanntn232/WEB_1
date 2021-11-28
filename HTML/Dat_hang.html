@@ -45,7 +45,9 @@
     <!-- Header -->
     <div class="header col-12">
         <img src="../Image/header.jpg" alt="SunPet">
-        <a href="HOME.html"><div class="header--overlay"></div></a>
+        <a href="HOME.html">
+            <div class="header--overlay"></div>
+        </a>
     </div>
 
     <!-- Nội dung đơn hàng -->
@@ -215,21 +217,28 @@
 
         //Button đặt hàng
         function datHang() {
-            var donHang = taoDonHang(idGioHang);
-            taoDanhSachDonHang(donHang);
-            xoaGioHang(idGioHang);
-            alert('Đặt đơn hàng thành công!');
+            var danhSachItemGioHang = JSON.parse(localStorage.getItem('danhSachItemGioHang_' + idGioHang));
+            console.log(danhSachItemGioHang);
+            if (danhSachItemGioHang.length != 0) {
+                var donHang = taoDonHang(idGioHang);
+                taoDanhSachDonHang(donHang);
+                xoaGioHang(idGioHang);
+                alert('Đặt đơn hàng thành công!');
 
-            //Hiển thị lại thông tin đơn hàng
-            //Hiển thị chi tiết giỏ hàng - đơn hàng
-            document.getElementById('giohang1').innerHTML = hienThiDanhSachItemDatHang_Desktop(idGioHang);
+                //Hiển thị lại thông tin đơn hàng
+                //Hiển thị chi tiết giỏ hàng - đơn hàng
+                document.getElementById('giohang1').innerHTML = hienThiDanhSachItemDatHang_Desktop(idGioHang);
 
-            document.getElementById('giohang2').innerHTML = hienThiDanhSachItemDatHang_Mobile(idGioHang);
+                document.getElementById('giohang2').innerHTML = hienThiDanhSachItemDatHang_Mobile(idGioHang);
 
-            //Hiển thị tổng tiền đơn hàng
-            document.getElementById('tongtien1').innerText = tinhTongGiaTriDonHang(idGioHang);
+                //Hiển thị tổng tiền đơn hàng
+                document.getElementById('tongtien1').innerText = tinhTongGiaTriDonHang(idGioHang);
 
-            document.getElementById('tongtien2').innerText = tinhTongGiaTriDonHang(idGioHang);
+                document.getElementById('tongtien2').innerText = tinhTongGiaTriDonHang(idGioHang);
+            }
+            else{
+                alert('Giỏ hàng rỗng. Vui lòng thêm sản phẩm vào giỏ hàng!');
+            }
         }
     </script>
 </body>
