@@ -111,5 +111,61 @@ function danhSachSanPhamTheoDanhMuc(danhMuc) {
     return dsSanPhamTheoDanhMuc;
 }
 
+//Sắp xếp sản phẩm giá tăng dần
+function sapXepGiaTangDan(danhSachSanPham){
+    var danhSachSanPhamGiaTangDan = new Array();
+    var mangGiaTangDan = new Array();
+    for(var i=0; i<danhSachSanPham.length; i++){
+        mangGiaTangDan.push(danhSachSanPham[i].giaBan);
+    }
+    mangGiaTangDan.sort(function(a,b){return b-a});
+    for(var i=0; i<mangGiaTangDan.length; i++){
+        for(var j = 0; j<danhSachSanPham.length;j++){
+            if(danhSachSanPham[j].giaBan == mangGiaTangDan[i]){
+                danhSachSanPhamGiaTangDan.push(danhSachSanPham[j]);
+                break;
+            }
+        }
+    }
+    return danhSachSanPhamGiaTangDan;
+}
+
+//Sắp xếp sản phẩm giá giảm dần
+function sapXepGiaGiamDan(danhSachSanPham){
+    var danhSachSanPhamGiaGiamDan = new Array();
+    var mangGiaGiamDan = new Array();
+    for(var i=0; i<danhSachSanPham.length; i++){
+        mangGiaGiamDan.push(danhSachSanPham[i].giaBan);
+    }
+    mangGiaGiamDan.sort(function(a,b){return a-b});
+    for(var i=0; i<mangGiaGiamDan.length; i++){
+        for(var j = 0; j<danhSachSanPham.length;j++){
+            if(danhSachSanPham[j].giaBan == mangGiaGiamDan[i]){
+                danhSachSanPhamGiaGiamDan.push(danhSachSanPham[j]);
+                break;
+            }
+        }
+    }
+    return danhSachSanPhamGiaGiamDan;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-------------------CSS nav mobile-----------------
+function removeChecked(){
+    var nav_mobile_input = document.getElementById('nav-mobile-input');
+    nav_mobile_input.checked = false;
+};
 
 

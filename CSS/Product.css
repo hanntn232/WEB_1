@@ -56,6 +56,9 @@ html {
 .app__content{
     padding-top: 24px;
 }
+.grid.wide{
+    margin: 0px 5px;
+}
 .category__heading{
     color: var(--text-color);
     font-size: 2rem;
@@ -277,6 +280,7 @@ html {
     right: 0;
     display: none;
     z-index: 3;
+    display: none;
 
 }
 .nav__overlay{
@@ -287,7 +291,6 @@ html {
     left: 0;
     background-color: rgba(0, 0, 0, 0.8);
     display: none;
-
 }
 .nav__mobile{
     position: fixed;
@@ -300,6 +303,7 @@ html {
     background-color: var(--white-color);
     transform: translateX(100%);
     z-index: 4;
+    display: none;
 }
 .nav__mobile--heading{
     
@@ -327,9 +331,7 @@ html {
 .nav__input{
     display: none;
 }
-.nav__input:checked ~.nav__overlay{
-    display: block;
-}
+
 .nav__input:checked ~.nav__mobile{
     transform: translateX(0);
 }
@@ -351,13 +353,13 @@ html {
     overflow: hidden;
 }
 /* tablet */
-@media  (min-width: 721px) and (max-width: 1023px)
+/* @media  (min-width: 721px) and (max-width: 1023px)
 {
     .nav__bars-btn{
         display: block;
     }
     
-}
+} */
 /* Mobile */
 @media(max-width: 720px)
 {
@@ -378,6 +380,12 @@ html {
     .frame--footer{
         min-width: 300px;
         height: 450px;
+    }
+    .nav__mobile{
+        display: block;
+    }
+    .nav__input:checked ~.nav__overlay{
+        display: block;
     }
 }
 

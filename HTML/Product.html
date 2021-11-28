@@ -23,48 +23,50 @@
             <div class="header--overlay"></div>
         </div>
         <div class="app__container">
-            <div class="grid wide">
+            <div class="grid-wide">
                 <div class="row sm-gutter app__content">
-                    <div class="col l-2 m-0 c-0">
+                    <div class="col l-2 m-3 c-0">
                         <nav class="category">
                             <h3 class="category__heading">
                                 <i class="category__heading-icon fas fa-list"></i>
                                 DANH MỤC
                             </h3>
                             <ul class="category-list">
-                                <li class="category-item ">
-                                    <a href="#" class="category-item__link">Trang chủ</a>
+                                <li class="category-item" id="category-item">
+                                    <a href="HOME.html" class="category-item__link">Trang chủ</a>
                                 </li>
                                 <li class="category-item category-item--active">
                                     <a href="#" class="category-item__link" onclick="window.location.reload()">Sản phẩm
                                     </a>
                                 <li class="category-item category-item-1">
-                                    <a href="#" class="category-item__link" onclick="hienDanhMucThucAnChoCho()"
-                                        id="category--thucanchocho">Thức ăn cho chó</a>
+                                    <a href="#category-item" class="category-item__link"
+                                        onclick="hienDanhMucThucAnChoCho()" id="category--thucanchocho">Thức ăn cho
+                                        chó</a>
                                 </li>
                                 <li class="category-item category-item-1">
-                                    <a href="#" class="category-item__link" id="category--thucanchomeo"
+                                    <a href="#category-item" class="category-item__link" id="category--thucanchomeo"
                                         onclick="hienDanhMucThucAnChoMeo()">Thức ăn cho mèo</a>
                                 </li>
                                 <li class="category-item category-item-1">
-                                    <a href="#" class="category-item__link" id="category--phukienchocho"
+                                    <a href="#category-item" class="category-item__link" id="category--phukienchocho"
                                         onclick="hienDanhMucPhuKienChoCho()">Phụ kiện cho
                                         chó</a>
                                 </li>
                                 <li class="category-item category-item-1">
-                                    <a href="#" class="category-item__link" id="category--phukienchomeo" onclick="hienDanhMucPhuKienChoMeo()">Phụ kiện cho mèo</a>
+                                    <a href="#category-item" class="category-item__link" id="category--phukienchomeo"
+                                        onclick="hienDanhMucPhuKienChoMeo()">Phụ kiện cho mèo</a>
                                 </li>
                                 </li>
                                 <li class="category-item">
-                                    <a href="#" class="category-item__link">Tin thú cưng</a>
+                                    <a href="Blog_Trangchu.html" class="category-item__link">Tin thú cưng</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="#" class="category-item__link">Liên hệ</a>
+                                    <a href="Contact.html" class="category-item__link">Liên hệ</a>
                                 </li>
                             </ul>
                         </nav>
                     </div>
-                    <div class="col l-10 m-12 c-12">
+                    <div class="col l-10 m-9 c-12">
                         <h3 class="category__heading">TẤT CẢ SẢN PHẨM</h3>
                         <div class="home-filter">
                             <div class="select-input">
@@ -73,10 +75,10 @@
                                 <!-- List options -->
                                 <ul class="select-input__list">
                                     <li class="select-input__item">
-                                        <a href="" class="select-input__link">Giá: tăng dần</a>
+                                        <a href="#" class="select-input__link tangdan" id="tangdan">Giá: tăng dần</a>
                                     </li>
                                     <li class="select-input__item">
-                                        <a href="" class="select-input__link">Giá giảm dần</a>
+                                        <a href="#" class="select-input__link giamdan">Giá giảm dần</a>
                                     </li>
                                 </ul>
                             </div>
@@ -118,14 +120,14 @@
             <label for="nav-mobile-input" class="nav__overlay">
 
             </label>
-            <nav class="nav__mobile">
+            <nav class="nav__mobile" id="nav__mobile" onblur="removeChecked()">
                 <h3 class="nav__mobile--heading">
 
                     DANH MỤC
                 </h3>
                 <ul class="nav__mobile-list">
                     <li class="nav__mobile-item ">
-                        <a href="#" class="nav__mobile-item__link">Trang chủ</a>
+                        <a href="HOME.html" class="nav__mobile-item__link">Trang chủ</a>
                     </li>
                     <li class="nav__mobile-item nav__mobile-item--active">
                         <a href="#" class="nav__mobile-item__link">Sản phẩm
@@ -144,10 +146,10 @@
                     </li>
                     </li>
                     <li class="nav__mobile-item">
-                        <a href="#" class="nav__mobile-item__link">Tin thú cưng</a>
+                        <a href="Blog_Trangchu.html" class="nav__mobile-item__link">Tin thú cưng</a>
                     </li>
                     <li class="nav__mobile-item">
-                        <a href="#" class="nav__mobile-item__link">Liên hệ</a>
+                        <a href="Contact.html" class="nav__mobile-item__link">Liên hệ</a>
                     </li>
                 </ul>
             </nav>
@@ -159,7 +161,17 @@
     </div>
     <script>
         //Load sản phẩm trang 1 khi mở trang lên
+        // if (localStorage.getItem('danhSachSanPhamTam') == null) {
+        //     var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
+        //     var jsondanhSachSanPham = JSON.stringify(danhSachSanPham);
+        //     localStorage.setItem('danhSachSanPhamTam', jsondanhSachSanPham);
+        // }
         var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
+        var jsondanhSachSanPham = JSON.stringify(danhSachSanPham);
+        localStorage.setItem('danhSachSanPhamTam', jsondanhSachSanPham);
+
+        //Lấy sản phẩm từ danh sách tạm
+        var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
         var dsSanPham = document.getElementById('dsSanPham');
         dsSanPham.innerHTML = hienThiSanPhamTheoTrang(1, danhSachSanPham);
 
@@ -183,10 +195,6 @@
             var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
             dsSanPham.innerHTML = hienThiSanPhamTheoTrang(3, danhSachSanPham);
         })
-
-
-
-
 
         //--Hiện danh mục thức ăn cho chó
         function hienDanhMucThucAnChoCho() {
@@ -314,9 +322,14 @@
             })
         }
 
+        document.getElementById('tangdan').addEventListener('click', function () {
+            danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
+            danhSachSanPham = sapXepGiaTangDan(danhSachSanPham);
+            localStorage.setItem('danhSachSanPhamTam', JSON.stringify(danhSachSanPham));
+        });
 
     </script>
-
+    <!-- <script src="../JS/sanPham.js"></script> -->
 </body>
 
 </html>
