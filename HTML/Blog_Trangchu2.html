@@ -147,7 +147,7 @@
                     </li>
                 </ul>
                 <div class="xemthem" id="xemthem">
-                    <div id="more" onclick="xemThem()">
+                    <div id="more">
                         <span>
                             Xem thêm <i class="select-input__icon fas fa-angle-down"></i>
                         </span>
@@ -249,6 +249,13 @@
     <div class="frame--footer--container">
         <iframe src="Footer.html" frameborder="0" class="frame--footer" scrolling="no"></iframe>
     </div>
+    <script>
+        document.getElementById('xemthem').addEventListener('click', function () {
+            if (window.matchMedia('(max-device-width: 790px)').matches) {
+                document.getElementById('xemthem').style.display = 'none';
+            }
+        })
+    </script>
 </body>
 
 </html>
