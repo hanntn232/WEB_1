@@ -88,7 +88,7 @@ function hienThiSanPhamTheoTrang(trang, danhSachSanPham) {
         }
     }
     htmlTong = chuyenDanhSachSanPhamSangHTML(danhSachSanPham_Trang);
-    for (i = 1; i <= 3; i++) {
+    for (i = 1; i < 3; i++) {
         if (i != trang) {
             document.getElementById('page-' + i).style.background = '#fff';
         }
