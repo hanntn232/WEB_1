@@ -54,7 +54,7 @@ html {
     padding: 10px 20px;
 }
 .app__content{
-    padding-top: 24px;
+    padding-top: 10px;
 }
 .grid.wide{
     margin: 0px 5px;
@@ -120,9 +120,43 @@ html {
 
 /* Home sort + filter */
 .home-filter{
-   
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+.search{
+    display:  flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.search>input{
+    border: 1px solid whitesmoke;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 5px 10px;
+    height: 30px;
+    width: 250px;
+    display: inline;
+    vertical-align: middle;
+    font-size: 15px;
+}
+.search>input::placeholder{
+    font-size: 12px;
+}
+
+.search .fas.fa-search{
+    background-color: var(--orange-color);
+    color: white;
+    padding: 5px 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    line-height: 20px;
+    align-items: center;
+}
+.search .fas.fa-search:hover{
+    background-color: #FFD541;
 }
 
 /* Product item */

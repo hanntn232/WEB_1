@@ -24,6 +24,10 @@
         </div>
         <div class="app__container">
             <div class="grid-wide">
+                <div class="search">
+                    <input type="text" placeholder="Bạn muốn tìm sản phẩm gì?" id="search_text">
+                    <label class="fas fa-search" onclick="timKiemSanPham()"></label>
+                </div>
                 <div class="row sm-gutter app__content">
                     <div class="col l-2 m-3 c-0">
                         <nav class="category">
@@ -75,16 +79,14 @@
                                 <!-- List options -->
                                 <ul class="select-input__list">
                                     <li class="select-input__item">
-                                        <a href="#category-item" class="select-input__link tangdan" id="tangdan">Giá:
-                                            tăng dần</a>
+                                        <a href="#category-item" class="select-input__link tangdan" id="tangdan">Giá: tăng dần</a>
                                     </li>
                                     <li class="select-input__item">
-                                        <a href="#category-item" class="select-input__link" id="giamdan">Giá giảm
+                                        <a href="#category-item" class="select-input__link" id="giamdan">Giá: giảm
                                             dần</a>
                                     </li>
                                 </ul>
                             </div>
-
                         </div>
                         <!-- Grid -> Row -> Column -->
                         <div class="home-product dsSanPham1">
