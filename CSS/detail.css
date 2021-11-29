@@ -68,31 +68,39 @@ html {
     border-radius: 8px;
     transition: transform linear 0.1s;
     will-change: transform;
+    
 }
 
 .home-product-item1>h4{
     height: 60px;
 }
-.home-product-item:hover{
-    transform: translateY(-1px);
-    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05) ;
-}
+
 .home-product-item__img{
-    padding-top: 80%;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 10px;
+
+    margin-bottom: 10px; 
+    width: 80%;
+
     
 }
 .item-dt{
+    /* text-align: center; */
+}
+.item-img{
     text-align: center;
+
 }
 .item-dt-1{
     margin: 1px 5px;
     width: 70px;
     height: 60px;
     border: 1px solid rgba(185, 157, 157, 0.5);
+    text-align: center;
+}
+.item-dt-1:hover{
+    cursor: pointer;
+    transform: translateY(-1px);
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05) ;
+    border: 1px solid var(--orange-color);
 }
 
 .home-product-item__price{
