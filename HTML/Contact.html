@@ -42,7 +42,7 @@
                 <img src="../Image/map.png" alt="">
             </div>
             
-            <form class="web--form" onload="getInfo()" action="Contactgetfixed.html" method="get">
+            <form class="web--form" method="dialog">
                 <h5>Nếu bạn có thắc mắc thì hãy điền thông tin form dưới đây</h5>
                 <div class="form--row">
                     <label for="name" class="form__label">Họ tên:
@@ -62,17 +62,15 @@
                     <input type="text" name="noidung" id="content"  class="form__input--1" required>
                 </div>
                 <div class="form--button">
-                    <button type="submit" name="submit" value="Gui" class="form__button--send" id="btnSubmit">Gửi
+                    <button name="btnSubmit" value="Gui" class="form__button--send" id="btnSubmit" type="submit">Gửi
                     </button>
                 </div>
-                
             </form>
         </div>
         <div class="frame--footer--container">
             <iframe src="Footer.html" frameborder="0" class="frame--footer" scrolling="no"></iframe>
         </div>
     </div>
-    
-    
+    <script src="../JS/contact_get.js"></script>
 </body>
 </html>
