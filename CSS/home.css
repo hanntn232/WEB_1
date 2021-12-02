@@ -59,7 +59,7 @@ a{
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
-    
+    color: black !important;
 }
 .header--phone{
     
@@ -70,6 +70,7 @@ a{
 }
 .fa-shopping-bag{
     font-size: 40px;
+    color: black !important;
 }
 
 .header--user{
@@ -135,13 +136,13 @@ a{
 .nav__list>li{
     border-bottom: 2px solid black;
     width: 70%;
+    margin-bottom: 10px;
 }
 
 .nav--bar--close{
     color: black;
     position: absolute;
     top: 10px;
-    
     
 }
 .nav__list i{
@@ -157,13 +158,13 @@ a{
 }
 
 .nav--bar a:hover{
-    color: white;
+    color: white; 
 }
 .nav__pc ul{
     list-style-type: none;
 }
 .nav__pc a{
-    color: black !important;
+    color: black;
 }
 
 .nav-link{
@@ -173,7 +174,11 @@ a{
     padding: 8px 0;
 }
 .nav-link:hover{
-    color: white !important;
+    color: white;
+}
+.nav--link{
+    color: black;
+    text-decoration: none;
 }
 .nav__input{
     display: none;
@@ -237,8 +242,7 @@ p>a{
     color: black;
 }
 p>a:hover{
-
-    color: #FFC700;
+    color: #FFC700 !important;
 }
 .web--cat{
     text-align: center;
@@ -289,9 +293,29 @@ p>a:hover{
 }
 .special--product--item{
     display: flex;
-    
 }
-
+.special--product--item>a{
+    color: black !important;
+}
+.special--product--item>a:hover{
+    color: #FBE89E !important;
+    text-decoration: none !important;
+}
+.special--product--item>a:visited{
+    color: black;
+    text-decoration: none;
+}
+.special--product--item1>a{
+    color: black !important;
+}
+.special--product--item1>a:hover{
+    color: #FBE89E !important;
+    text-decoration: none !important;
+}
+.special--product--item1>a:visited{
+    color: black;
+    text-decoration: none;
+}
 .special--product--price{
     display: flex;
     
@@ -363,7 +387,7 @@ button>a{
     color: black;
 }
 button>a:hover{
-    color: blue;
+    color: blue !important;
 }
 .special--product--detail1{
     background-color: white;
@@ -372,8 +396,30 @@ button>a:hover{
     text-align: center;
 }
 .special--product--detail1:hover{
-    transform: translateY(-1px);
-    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05) ;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05) !important;
+}
+.web--eatdog--detail1>a{
+    color: black !important;
+}
+.web--eatdog--detail1>a:hover{
+    color: #FBE89E !important;
+    text-decoration: none !important;
+}
+.web--eatdog--detail1>a:visited{
+    color: black;
+    text-decoration: none;
+}
+.web--eatcat--detail1>a{
+    color: black !important;
+}
+.web--eatcat--detail1>a:hover{
+    color: #FBE89E !important;
+    text-decoration: none !important;
+}
+.web--eatcat--detail1>a:visited{
+    color: black;
+    text-decoration: none;
 }
 .web--fashion--rectangle .button--more{
     text-align: center;
@@ -400,14 +446,26 @@ button>a:hover{
     
 }
 .web--discount img{
-    width: 35%;
+    width: auto;
     height: 100%;
+    object-fit: cover;
 }
 /*fashion*/
 .fashion--rectangle--detail{
     display: flex;
     text-align: center;
     justify-content: space-evenly;
+}
+.fashion--rectangle--detail>a{
+    color: black !important;
+}
+.fashion--rectangle--detail>a:hover{
+    color: #FBE89E !important;
+    text-decoration: none !important;
+}
+.fashion--rectangle--detail>a:visited{
+    color: black !important;
+    text-decoration: none !important;
 }
 .special--product--detail2{
     background-color: white;
@@ -585,7 +643,7 @@ button>a:hover{
 .whychoose--block--right img{
     height: 300px;
     width: auto;
-    float: right;
+    object-fit: cover;
 }
 .whychoose--block--left{
     float: left;
@@ -602,6 +660,7 @@ button>a:hover{
 }
 .web--banner--sponsors img{
     width: 100%;
+    object-fit: cover;
 }
 .web--register--info{
     background-color: #FFC700;
@@ -709,9 +768,7 @@ button>a:hover{
     .web--dogcat--detail{
         display: block;
     }
-    .web--discount img{
-        height: 200px;
-    }
+    
     .special--product--detail1{
         display: block;
     }
@@ -779,6 +836,11 @@ button>a:hover{
     .web--discount{
         height: 200px;
     }
+    .web--discount img{
+        width: auto;
+        height: 100%;
+        object-fit: fill;
+    }
     .web--register--info{
         display: block;
     }
@@ -793,6 +855,8 @@ button>a:hover{
     }
     .whychoose--block--right img{
         width: 100%;
+        height: 300px;
+        object-fit: fill;
     }
     .web--whychoose--block p{
         font-size: large;
