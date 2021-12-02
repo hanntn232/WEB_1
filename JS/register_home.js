@@ -1,10 +1,14 @@
 //khai báo key
 var nhanThongTinQuaEmail = localStorage.getItem('nhanThongTinQuaEmail');
-var jsonNhanThongTin = [];
-//
-var btnRegister = document.getElementById('btnRegister');
-btnRegister.addEventListener('click',getEmail);
+if (nhanThongTinQuaEmail == null) {
+	jsonNhanThongTin = new Array();
+}
+else {
+	var jsonNhanThongTin = JSON.parse(nhanThongTinQuaEmail);
+}
+//khai báo hàm lưu email xuống local storage
 function getEmail() {
+    if (kiemTraEmail(email) == true){
 	//get value
 	var input = document.getElementById('email');
 	var newInput = input.value;
@@ -13,8 +17,21 @@ function getEmail() {
 	//lấy thông tin lưu xuống localstorage
 	localStorage.setItem('nhanThongTinQuaEmail',JSON.stringify(jsonNhanThongTin));
 	alert('Đăng ký nhận thông tin thành công!');
+    }
+    else{
+        alert('Email không đúng định dạng!');
+        return false;
+    }
+};
+//kiểm tra email
+function kiemTraEmail(email) {
+    var email = document.getElementById('email').value;
+    var dinhdang = false;
+    if (email.includes(".")){
+        dinhdang = true;
+    }
+    return dinhdang;
 }
-
 
 
 //--------------TÌM KIẾM TRÊN THANH NAVBAR---------------
