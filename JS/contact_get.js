@@ -8,23 +8,17 @@ if (nhanPhanHoi == null) {
 else {
     var jsonThongTin = JSON.parse(nhanPhanHoi);
 }
-function layThongTin() {
+function layThongTin(name,phone,email,content) {
     if (validateForm(name,content) == false){
         if (kiemTraEmail(email) == true){
             if (kiemTraSDT(phone) == true) {
                 //get value
-                var name = document.getElementById('name');
-                var newHoTen = name.value;
-                jsonThongTin.push(newHoTen);
-                var phone = document.getElementById('phone');
-                var newPhone = phone.value;
-                jsonThongTin.push(newPhone);
-                var email = document.getElementById('email');
-                var newEmail = email.value;
-                jsonThongTin.push(newEmail);
-                var content = document.getElementById('content');
-                var newContent = content.value;
-                jsonThongTin.push(newContent);
+                var phanHoi = new Object();
+                phanHoi.name = document.getElementById('name').value;
+                phanHoi.phone = document.getElementById('phone').value;
+                phanHoi.email = document.getElementById('email').value;
+                phanHoi.content = document.getElementById('content').value;
+                jsonThongTin.push(phanHoi);
                 name.value = '';
                 phone.value = '';
                 email.value = '';
