@@ -87,7 +87,7 @@ function hienThiDoiTuongItemDatHang_Desktop(itemGioHang) {
     html += '</div>\n'
     html += '<div class="giohang--dongia col-2">\n'
     html += '<p>\n'
-    html += '' + thongTinSanPham.giaBan / 1000 + '<span>.000 đ</span>\n'
+    html += '' + dinhDangTienTe((thongTinSanPham.giaBan/1000).toString()) + '<span>.000 đ</span>\n'
     html += '</p>\n'
     html += '</div>\n'
     html += '<div class="giohang--soluong col-2">\n'
@@ -96,7 +96,7 @@ function hienThiDoiTuongItemDatHang_Desktop(itemGioHang) {
     html += '</div>\n'
     html += '<div class="giohang--thanhtien col-2">\n'
     html += '<p>\n'
-    html += '' + (thongTinSanPham.giaBan * itemGioHang.soLuong) / 1000 + '<span>.000 đ</span>\n'
+    html += '' + dinhDangTienTe(((thongTinSanPham.giaBan * itemGioHang.soLuong)/1000).toString()) + '<span>.000 đ</span>\n'
     html += '</p>\n'
     html += '</div>\n'
     html += '</div>';
@@ -119,7 +119,7 @@ function hienThiDoiTuongItemDatHang_Mobile(itemGioHang) {
     html += '<div class="giohang--dongia">\n'
     html += '<span style="float: left;">Giá:&nbsp;</span>\n'
     html += '<p>\n'
-    html += '' + thongTinSanPham.giaBan / 1000 + '<span>.000 đ</span>\n'
+    html += '' + dinhDangTienTe((thongTinSanPham.giaBan/1000).toString()) + '<span>.000 đ</span>\n'
     html += '</p>\n'
     html += '</div>\n'
     html += '</div>\n'
@@ -130,7 +130,7 @@ function hienThiDoiTuongItemDatHang_Mobile(itemGioHang) {
     html += '<div class="giohang--thanhtien">\n'
     html += '<div>Thành tiền:</div>\n'
     html += '<p>\n'
-    html += '' + (thongTinSanPham.giaBan * itemGioHang.soLuong) / 1000 + '<span>.000 đ</span>\n'
+    html += '' + dinhDangTienTe(((thongTinSanPham.giaBan * itemGioHang.soLuong)/1000).toString()) + '<span>.000 đ</span>\n'
     html += '</p>\n'
     html += '</div>\n'
     html += '</div>\n'
@@ -167,7 +167,7 @@ function tinhTongGiaTriDonHang(idGioHang) {
         var thongTinSanPham = layThongTinSanPham(danhSachItemGioHang[i]);
         tongTien += eval(thongTinSanPham.giaBan) * eval(danhSachItemGioHang[i].soLuong);
     }
-    return tongTien / 1000;
+    return tongTien;
 }
 
 
@@ -283,4 +283,33 @@ function taoIdDonHang() {
     id = id.getTime();
     id = Math.random().toString().substring(1, 6) + '_' + id.toString();
     return id;
+}
+
+
+//Hàm định dạng tiền tệ
+function dinhDangTienTe(tien){
+    tien = tien.split('');
+    tien = tien.reverse();
+    var soDauCham;
+    var dai = tien.length;
+    var tienDinhDang = '';
+    if(dai%3 == 0){
+        soDauCham = Math.floor(dai/3) - 1;
+    }
+    else{
+        soDauCham = Math.floor(dai/3);
+    }
+    for(var i= 0; i<tien.length; i++){
+        if((i+1)%3 == 0 && soDauCham != 0){
+            tienDinhDang += tien[i] + '.' ;
+            soDauCham--;
+        }
+        else{
+            tienDinhDang += tien[i];
+        }
+    }
+    tienDinhDang = tienDinhDang.split('');
+    tienDinhDang = tienDinhDang.reverse();
+    tienDinhDang = tienDinhDang.join('');
+    return tienDinhDang;
 }

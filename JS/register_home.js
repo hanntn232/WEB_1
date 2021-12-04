@@ -66,3 +66,32 @@ function kiemTraNoiDungRong(chuoi) {
 
 
 
+
+//Hàm hiển thị user đăng nhập, đăng ký
+function hienThiMenuUser(){
+    var phienDangNhap = localStorage.getItem('phienDangNhap');
+    var dangNhap = document.getElementById('dangnhap');
+    var dangKy = document.getElementById('dangky');
+    var xemThongTin = document.getElementById('xemthongtin');
+    var dangXuat = document.getElementById('dangxuat');
+    if(phienDangNhap == null){
+        dangNhap.style.display = 'block';
+        dangKy.style.display = 'block';
+        xemThongTin.style.display = 'none';
+        dangXuat.style.display = 'none';
+    }
+    else{
+        dangNhap.style.display = 'none';
+        dangKy.style.display = 'none';
+        xemThongTin.style.display = 'block';
+        dangXuat.style.display = 'block';
+    }
+}
+
+function dangXuat(){
+    localStorage.removeItem('phienDangNhap');
+    window.location.reload();
+}
+
+
+

@@ -211,9 +211,9 @@
         document.getElementById('giohang2').innerHTML = hienThiDanhSachItemDatHang_Mobile(idGioHang);
 
         //Hiển thị tổng tiền đơn hàng
-        document.getElementById('tongtien1').innerText = tinhTongGiaTriDonHang(idGioHang);
+        document.getElementById('tongtien1').innerText = dinhDangTienTe((tinhTongGiaTriDonHang(idGioHang)/1000).toString());
 
-        document.getElementById('tongtien2').innerText = tinhTongGiaTriDonHang(idGioHang);
+        document.getElementById('tongtien2').innerText = dinhDangTienTe((tinhTongGiaTriDonHang(idGioHang)/1000).toString());
 
         //Button đặt hàng
         function datHang() {
@@ -232,9 +232,10 @@
                 document.getElementById('giohang2').innerHTML = hienThiDanhSachItemDatHang_Mobile(idGioHang);
 
                 //Hiển thị tổng tiền đơn hàng
-                document.getElementById('tongtien1').innerText = tinhTongGiaTriDonHang(idGioHang);
+                document.getElementById('tongtien1').innerText = dinhDangTienTe((tinhTongGiaTriDonHang(idGioHang)/1000).toString());
 
-                document.getElementById('tongtien2').innerText = tinhTongGiaTriDonHang(idGioHang);
+                document.getElementById('tongtien2').innerText = dinhDangTienTe((tinhTongGiaTriDonHang(idGioHang)/1000).toString());
+
             }
             else{
                 alert('Giỏ hàng rỗng. Vui lòng thêm sản phẩm vào giỏ hàng!');
