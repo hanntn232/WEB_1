@@ -6,14 +6,15 @@
 * {
     font-family: Opensans;
     font-size: 20px;
+    outline: none;
+    box-sizing: border-box;
 }
-
-.form{
+/* .form{
     margin:auto;
     width: 80%;
     border-radius: 20px;
     padding:25px; 
-}
+} */
 .layout-2{
     padding: 20px;
 }
@@ -23,17 +24,16 @@
     justify-content: center;
     min-height: 100vh;
     padding: 40px;
-    background: linear-gradient(115deg, #b3fa55 10%, #e9c62a 90%);
+    background: white;
+    padding-bottom: 100px;
   }
   .form-wrapper{
     max-width: 800px;
+    min-height: auto;
     background: #fff;
     width: 800px;
     padding: 25px 40px 10px 40px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-  }
-  .form-wrapper form{
-    padding: 30px 0 0 0;
   }
   .form-wrapper form .form-row{
     display: flex;
@@ -112,12 +112,11 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    background:#FFA800;
+    background:#FFA700;
     transition: all 0.4s;
   }
   .submit-btn .input-data:hover .button{
-      left: 0;
-    background-color: rgb(47, 47, 243);
+    background-color:#ff7300;
   }
   .submit-btn .input-data input{
     background: none;
@@ -131,8 +130,12 @@
     position: relative;
     z-index: 2;
   }
+  .user-head{
+    width: 100%;
+  }
   .image-head{
-      text-align: center;
+    margin: auto;
+    width: 100%;
   }
   .circle{
       height: 120px;
@@ -149,35 +152,32 @@
  .content-center{
      margin:20px;
  }
- .layout-2--item {
-    padding-bottom: 100px;
-}
-@media (max-width: 700px) {
-
-    .container form{
-      padding: 10px 0 0 0;
-    }
-    .container form .form-row{
-      display: block;
-    }
-    form .form-row .input-data{
-      margin: 35px 0!important;
-    }
-    .submit-btn .input-data{
-      width: 40%!important;
-    }
-  }
-
-@media  (min-width: 721px) and (max-width: 1023px)
-{
-   
-}
 /* Mobile */
-@media(max-width: 720px)
-{
-    *{
+@media (max-width: 720px) {
+  *{
         font-family: Opensans;
         font-size: 12px;
+    }
+    .layout-2--item{
+      padding: 5px;
+    }
+    .form-wrapper{
+      padding:10px;
+    }
+    .form{
+      margin:0px;
+      padding:0px;
+    }
+    .form-wrapper form .form-row{
+      display: block;
+    }
+    .input-data{
+      display: block;
+      margin: 35px 0px!important;
+    }
+    .submit-btn .input-data{
+      margin-top: 150px;
+      width: 80%!important;
     }
     .frame--footer--container{
         min-width: 300px;
@@ -186,4 +186,31 @@
     .frame--footer{
         min-width: 300px;  
     }
+  }
+/* Tablet */
+@media  (min-width: 720px) and (max-width: 1023px)
+{
+  *{
+    font-family: Opensans;
+    font-size: 15px;
+}
+.form-wrapper form{
+  padding: 10px 0 0 0;
+}
+.form-wrapper form .form-row{
+  display: block;
+}
+form .form-row .input-data{
+  margin: 40px 0px!important;
+}
+.submit-btn .input-data{
+  width: 60%!important;
+}
+.frame--footer--container{
+    min-width: 300px;
+    height: 450px;
+}
+.frame--footer{
+    min-width: 300px;  
+}
 }
