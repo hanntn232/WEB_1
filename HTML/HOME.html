@@ -45,13 +45,13 @@
                             aria-expanded="false"><i class="fas fa-user"></i>
                         </button>
                         <div class="dropdown-menu dropdown-menu-right dropdown-content ">
-                            <a class="dropdown-item " href="Dang_ky.html">Đăng ký</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="Dang_nhap.html">Đăng nhập</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="Xemthongtin.html">Xem thông tin</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="Dang_nhap.html">Đăng xuất</a>
+                            <a class="dropdown-item " href="Dang_ky.html" id="dangky">Đăng ký</a>
+                        
+                            <a class="dropdown-item" href="Dang_nhap.html" id="dangnhap">Đăng nhập</a>
+                            
+                            <a class="dropdown-item" href="Xemthongtin.html" id="xemthongtin">Xem thông tin</a>
+                           
+                            <a class="dropdown-item" href="#" id="dangxuat" onclick="dangXuat()">Đăng xuất</a>
                         </div>
                     </div>
                 </div>
@@ -69,16 +69,16 @@
                             <!-- ml auto là auto margin left -->
                             <li class="nav-item">
                                 <!-- nav-item quy định màu là màu xanh, flex 1, mỗi item cách ra một khoảng -->
-                                <a class="nav-link" href="#">TRANG CHỦ |</a>
+                                <a class="nav-link" href="#">TRANG CHỦ</a>
                             </li>
                             <li class="nav-item">
-                                <a href="Contact.html" class="nav-link">LIÊN HỆ |</a>
+                                <a href="Contact.html" class="nav-link">LIÊN HỆ</a>
                             </li>
                             <li class="nav-item">
-                                <a href="Product.html" class="nav-link">SẢN PHẨM |</a>
+                                <a href="Product.html" class="nav-link">SẢN PHẨM</a>
                             </li>
                             <li class="nav-item">
-                                <a href="Blog_Trangchu.html" class="nav-link">BLOG |</i></a>
+                                <a href="Blog_Trangchu.html" class="nav-link">BLOG</i></a>
                             </li>
 
                         </ul>
@@ -488,6 +488,9 @@
             </div>
         </div>
         <script src="../JS/register_home.js">
+        </script>
+        <script>
+            window.onload = hienThiMenuUser();
         </script>
 </body>
 
