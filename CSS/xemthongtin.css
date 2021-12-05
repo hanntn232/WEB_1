@@ -61,7 +61,7 @@
   .input-data input:valid ~ label, .textarea textarea:valid ~ label{
     transform: translateY(-20px);
     font-size: 14px;
-    color: #FFA800;
+    color: #FFC700;
   }
   .textarea textarea{
     resize: none;
@@ -90,7 +90,7 @@
     content: "";
     height: 2px;
     width: 100%;
-    background: #FFA800;
+    background: #FFC700;
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease;
@@ -100,6 +100,10 @@
   .textarea textarea:focus ~ .underline:before,
   .textarea textarea:valid ~ .underline:before{
     transform: scale(1);
+  }
+  .submit-btn{
+    justify-content: center;
+    
   }
   .submit-btn .input-data{
     margin-left: auto;
@@ -112,11 +116,12 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    background:#FFA700;
+    background:#FFC700;
     transition: all 0.4s;
+    font-weight: bold;
   }
   .submit-btn .input-data:hover .button{
-    background-color:#ff7300;
+    background-color: #FFD541;
   }
   .submit-btn .input-data input{
     background: none;
@@ -130,13 +135,22 @@
     position: relative;
     z-index: 2;
   }
-  .user-head{
+  .user-header{
     width: 100%;
+    text-align: center;
   }
   .image-head{
     margin: auto;
     width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
   }
+  .form-row.user{
+    justify-content: center;
+  }
+  
+
   .circle{
       height: 120px;
       width: 120px;
@@ -147,7 +161,7 @@
      display:inline;
      padding:5px;
      vertical-align: bottom;
-     color:#FFA800;
+     color:#FFC800;
  }
  .content-center{
      margin:20px;
@@ -185,6 +199,10 @@
     }
     .frame--footer{
         min-width: 300px;  
+    }
+
+    .image-head{
+      text-align: center;
     }
   }
 /* Tablet */
