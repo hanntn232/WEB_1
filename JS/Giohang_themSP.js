@@ -207,7 +207,7 @@ function tangSoLuong(idGioHang, idSanPham) {
     var danhSachItemGioHang = JSON.parse(localStorage.getItem('danhSachItemGioHang_' + idGioHang));
     for (var i = 0; i < danhSachItemGioHang.length; i++) {
         if (idSanPham == danhSachItemGioHang[i].idSanPham) {
-            danhSachItemGioHang[i].soLuong = eval(danhSachItemGioHang[i].soLuong + 1);
+            danhSachItemGioHang[i].soLuong = eval(danhSachItemGioHang[i].soLuong) + 1;
             break;
         }
     }
