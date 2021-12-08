@@ -46,6 +46,7 @@
 }
 .blog_bottom{
     display: flex;
+    padding-bottom: 20px;
 }
 .summary_blog{
     max-width: 100%;
@@ -76,6 +77,7 @@
 .content__underline{
     text-decoration: none; 
     margin-left: 15px;
+    padding-left: 35px;
 }
 .post-time {
     color: #FFC700; 
@@ -215,6 +217,11 @@
     .xemthem{
         display: block;
     }
+    .content__underline{
+        text-decoration: none; 
+        margin-left: 15px;
+        padding-left: 0px;
+    }
 }
 
 
@@ -232,6 +239,11 @@
     }
     .frame--footer{
         height: 450px !important;
+    }
+    .content__underline{
+        text-decoration: none; 
+        margin-left: 15px;
+        padding-left: 0px;
     }
 }
 
@@ -261,6 +273,11 @@
     }
     .header>.header--overlay{
         min-width: 300px;
+    }
+    .content__underline{
+        text-decoration: none; 
+        margin-left: 15px;
+        padding-left: 0px;
     }
 }
 
