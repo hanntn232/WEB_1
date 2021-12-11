@@ -70,7 +70,7 @@
   .input-data label{
     position: absolute;
     pointer-events: none;
-    bottom: 10px;
+    bottom: 15px;
     font-size: 16px;
     transition: all 0.3s ease;
   }
@@ -189,6 +189,9 @@
       display: block;
       margin: 35px 0px!important;
     }
+    .form-row.submit-btn{
+      display: flex !important;
+    }
     .submit-btn .input-data{
       margin-top: 150px;
       width: 80%!important;
@@ -217,6 +220,9 @@
 }
 .form-wrapper form .form-row{
   display: block;
+}
+.form-row.submit-btn{
+  display: flex !important;
 }
 form .form-row .input-data{
   margin: 40px 0px!important;

@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="../CSS/Bootstrap/bootstrap-grid.min.css">
     <link rel="stylesheet" href="../CSS/Font-awesome/css/all.css">
     <link rel="stylesheet" href="../CSS/xemthongtin.css">
+    <script src="../JS/xemThongTin.js"></script>
 </head>
 
-<body>
+<body onload="hienThiThongTin()">
     <div class="web--container">
         <!-- Header -->
         <div class="web--header">
@@ -123,37 +124,32 @@
                     </div>
                     <div class="form-row">
                         <div class="input-data">
-                            <input type="text" required>
+                            <input type="text" required id="ho" autocomplete="off">
                             <div class="underline"></div>
-                            <label for="">Tên:</label>
+                            <label for="">Họ:</label>
                         </div>
                         <div class="input-data">
-                            <input type="text" required>
+                            <input type="text" required id="ten" autocomplete="off">
                             <div class="underline"></div>
-                            <label for="">Tuổi:</label>
+                            <label for="">Tên:</label>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="input-data">
-                            <input type="text" required>
-                            <div class="underline"></div>
-                            <label for="">Email:</label>
-                        </div>
-                        <div class="input-data">
-                            <input type="text" required>
+                            <input type="text" required id="sdt" autocomplete="off">
                             <div class="underline"></div>
                             <label for="">SĐT</label>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="input-data textarea">
-                            <textarea rows="8" cols="80" required></textarea>
+                            <textarea rows="8" cols="80" required id="diachi" autocomplete="off"></textarea>
                             <br/>
                             <div class="underline"></div>
                             <label for="">Địa chỉ:</label>
                         </div>
                     </div>
-                    <div class="form-row submit-btn">
+                    <div class="form-row submit-btn" onclick="thayDoiThongTin()">
                         <div class="input-data ">
                             <input type="submit" value="Cập nhật thông tin" class="button">
                         </div>
