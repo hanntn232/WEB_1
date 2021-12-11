@@ -281,7 +281,8 @@ function xoaGioHang(idGioHang) {
 function taoIdDonHang() {
     var id = new Date();
     id = id.getTime();
-    id = Math.random().toString().substring(1, 6) + '_' + id.toString();
+    id = Math.random().toString().substring(3, 7) + '_' + id.toString();
+    console.log(id);
     return id;
 }
 
