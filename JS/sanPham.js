@@ -26,18 +26,6 @@ function taoDoiTuongSanPham(hinhAnh, ten, danhMuc, giaGoc, giaBan, linkChiTietSa
     sanPham.giaBan = giaBan;
     sanPham.linkChiTietSanPham = linkChiTietSanPham;
 
-    // //Chuyển đối tượng sanPham thành JSON
-    // sanPham.toJson = function () {
-    //     var json = JSON.stringify(this);
-    //     return json;
-    // }
-
-    // //Chuyển đối tượng JSON thành sanPham
-    // sanPham.fromJson = function (json) {
-    //     var sanPhamTraVe = JSON.parse(json);
-    //     var sanPhamDayDu = taoDoiTuongSanPham(sanPhamTraVe.id, sanPhamTraVe.hinhAnh, sanPhamTraVe.ten, sanPhamTraVe.danhMuc, sanPhamTraVe.giaGoc, sanPhamTraVe.giaBan, sanPhamTraVe.moTa, sanPham.linkChiTietSanPham)
-    //     return sanPhamTraVe;
-    // }
     return sanPham;
 }
 
