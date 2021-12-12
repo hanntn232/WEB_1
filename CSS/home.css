@@ -317,6 +317,7 @@ p>a:hover{
     margin-right: 10px;
     text-align: center;
     margin-left: 10px;
+    height: 300px;
 }
 .special--product--detail:hover{
     transform: translateY(-1px);
@@ -425,6 +426,7 @@ button>a:hover{
     border-radius: 10px;
     margin-right: 10px;
     text-align: center;
+    height: 300px;
 }
 .special--product--detail1:hover{
     transform: translateY(-1px) !important;
@@ -852,8 +854,8 @@ button>a:hover{
         width: 180px;
     }
     .web--special{
-        height: 650px;
-        
+        height: auto;
+        padding-bottom: 20px;
     }
     
     .special--product--detail{
