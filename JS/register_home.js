@@ -1,8 +1,3 @@
-//Remove check navbar mobile khi màn hình vượt 720px
-function removeChecked(){
-    document.getElementById('nav--input').checked = false;
-}
-
 
 //khai báo hàm lưu email xuống local storage
 function getEmail(email) {
