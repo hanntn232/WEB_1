@@ -83,6 +83,8 @@
 }
 .form--button{
     width: 15%;
+    margin: auto;
+    margin-top: 20px;
 }
 .frame--footer--container{
     min-width: 300px;

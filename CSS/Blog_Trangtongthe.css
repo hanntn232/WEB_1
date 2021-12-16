@@ -28,6 +28,10 @@
     border-radius: 30px;
     text-decoration: none;
 }
+.blog_item{
+    width: 70%;
+    margin: auto;
+}
 
 .blog__position{
     position: relative;
@@ -218,6 +222,12 @@
     .xemthem{
         display: block;
     }
+
+    .blog_item{
+        width: 100%;
+      margin: auto;
+    }
+
     .content__underline{
         text-decoration: none; 
         margin-left: 15px;
@@ -275,6 +285,16 @@
     .header>.header--overlay{
         min-width: 300px;
     }
+
+    .blog_bottom{
+        flex-direction: column;
+    }
+    .post-time>.readmore{
+        display: none;
+    }
+    .content__underline{
+        margin-top: 10px;
+
     .content__underline{
         text-decoration: none; 
         margin-left: 15px;

@@ -99,7 +99,7 @@
                         <div class="col-2">Thành tiền</div>
                     </div>
                     <div id="giohang1">
-                        <div class="giohang--item">
+                        <!-- <div class="giohang--item">
                             <div class="giohang--anhsp col-2">
                                 <img src="../Image/sanpham.PNG" alt="sanpham">
                             </div>
@@ -120,12 +120,12 @@
                                     300<span>.000 đ</span>
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="row giohang--pttt">
                     <div class="col-lg-12 col-md-12 bold">
-                        <div class="tongtien">Tổng tiền: <span id="tongtien1">300</span><span>.000 đ</span></div>
+                        <div class="tongtien">Tổng tiền: <span id="tongtien1">0</span><span>.000 đ</span></div>
                     </div>
                 </div>
 
@@ -142,7 +142,7 @@
                 </div>
                 <div class="giohang--container">
                     <div id="giohang2">
-                        <div class="giohang--item">
+                        <!-- <div class="giohang--item">
                             <div class="giohang--anhsp">
                                 <img src="../Image/sanpham.PNG" alt="sanpham">
                             </div>
@@ -169,12 +169,12 @@
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="giohang2--footer">
                     <div class="col-sm-12 col-xs-12 bold">
-                        <div class="tongtien">Tổng tiền: <span id="tongtien2">300</span><span>.000 đ</span></div>
+                        <div class="tongtien">Tổng tiền: <span id="tongtien2">0</span><span>.000 đ</span></div>
                     </div>
                     <div class="col-sm-12 col-xs-12 bold btn-center">
                         <button class="btn-tienhanhdathang" onclick="datHang()">Đặt hàng</button>
@@ -211,35 +211,41 @@
         document.getElementById('giohang2').innerHTML = hienThiDanhSachItemDatHang_Mobile(idGioHang);
 
         //Hiển thị tổng tiền đơn hàng
-        document.getElementById('tongtien1').innerText = dinhDangTienTe((tinhTongGiaTriDonHang(idGioHang)/1000).toString());
+        document.getElementById('tongtien1').innerText = dinhDangTienTe((tinhTongGiaTriDonHang(idGioHang) / 1000).toString());
 
-        document.getElementById('tongtien2').innerText = dinhDangTienTe((tinhTongGiaTriDonHang(idGioHang)/1000).toString());
+        document.getElementById('tongtien2').innerText = dinhDangTienTe((tinhTongGiaTriDonHang(idGioHang) / 1000).toString());
 
         //Button đặt hàng
         function datHang() {
             var danhSachItemGioHang = JSON.parse(localStorage.getItem('danhSachItemGioHang_' + idGioHang));
             console.log(danhSachItemGioHang);
-            if (danhSachItemGioHang.length != 0) {
-                var donHang = taoDonHang(idGioHang);
-                taoDanhSachDonHang(donHang);
-                xoaGioHang(idGioHang);
-                alert('Đặt đơn hàng thành công!');
+            if (danhSachItemGioHang != null) {
+                if (danhSachItemGioHang.length != 0) {
+                    var donHang = taoDonHang(idGioHang);
+                    taoDanhSachDonHang(donHang);
+                    xoaGioHang(idGioHang);
+                    alert('Đặt đơn hàng thành công!');
 
-                //Hiển thị lại thông tin đơn hàng
-                //Hiển thị chi tiết giỏ hàng - đơn hàng
-                document.getElementById('giohang1').innerHTML = hienThiDanhSachItemDatHang_Desktop(idGioHang);
+                    //Hiển thị lại thông tin đơn hàng
+                    //Hiển thị chi tiết giỏ hàng - đơn hàng
+                    document.getElementById('giohang1').innerHTML = hienThiDanhSachItemDatHang_Desktop(idGioHang);
 
-                document.getElementById('giohang2').innerHTML = hienThiDanhSachItemDatHang_Mobile(idGioHang);
+                    document.getElementById('giohang2').innerHTML = hienThiDanhSachItemDatHang_Mobile(idGioHang);
 
-                //Hiển thị tổng tiền đơn hàng
-                document.getElementById('tongtien1').innerText = dinhDangTienTe((tinhTongGiaTriDonHang(idGioHang)/1000).toString());
+                    //Hiển thị tổng tiền đơn hàng
+                    document.getElementById('tongtien1').innerText = dinhDangTienTe((tinhTongGiaTriDonHang(idGioHang) / 1000).toString());
 
-                document.getElementById('tongtien2').innerText = dinhDangTienTe((tinhTongGiaTriDonHang(idGioHang)/1000).toString());
+                    document.getElementById('tongtien2').innerText = dinhDangTienTe((tinhTongGiaTriDonHang(idGioHang) / 1000).toString());
 
+                }
+                else {
+                    alert('Giỏ hàng rỗng. Vui lòng thêm sản phẩm vào giỏ hàng!');
+                }
             }
             else{
                 alert('Giỏ hàng rỗng. Vui lòng thêm sản phẩm vào giỏ hàng!');
             }
+
         }
     </script>
 </body>
