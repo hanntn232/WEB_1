@@ -177,6 +177,7 @@ html {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     transition: transform linear 0.1s;
     will-change: transform;
+    height: 90%;
 }
 .home-product-item__name{
     height: 60px;
@@ -186,7 +187,6 @@ html {
     box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05) ;
 }
 .home-product-item__img{
-    padding-top: 98%;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -197,7 +197,7 @@ html {
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--text-color);
-    line-height: 1.3srem;
+    line-height: 2rem;
     margin: 10px ;
     text-align: center;
 
@@ -235,6 +235,9 @@ html {
     align-items: center;
     justify-content: space-between;
   
+}
+.select-input:hover{
+    cursor: pointer;
 }
 .select-input__label{
     font-size: 1.5rem;
@@ -338,6 +341,7 @@ html {
     display: none;
 
 }
+
 .nav__overlay{
     position: fixed;
     top: 0;

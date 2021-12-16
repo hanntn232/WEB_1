@@ -186,7 +186,7 @@ function timKiemSanPham(){
     var noiDungTimKiem = document.getElementById('search_text').value;
     noiDungTimKiem = noiDungTimKiem.trim();
     var danhSachTrungKhop = new Array();
-    var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPhamTam'));
+    var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
     if(kiemTraNoiDungRong(noiDungTimKiem) ==  false){
         for(var i=0; i<danhSachSanPham.length; i++){
             if(danhSachSanPham[i].ten.toLowerCase().includes(noiDungTimKiem.toLowerCase())==true){

@@ -289,16 +289,24 @@ p>a:hover{
     margin: 30px;
     
 }
-.web--special p{
+.web--special{
     text-align: center;
     padding-top: 10px;
     font-weight: bold;
-    
 }
 .web--special--block{
     width: 100%;
     display: flex;
 }
+.web--special--block>div{
+    width: 50%;
+}
+.special--product--name{
+    height: 90px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
 
 .special--product--img img{
     height: 100px;
@@ -323,6 +331,7 @@ p>a:hover{
 }
 .special--product--item>a{
     color: black !important;
+    width: 50%;
 }
 
 .special--product--item>a:visited{
@@ -364,6 +373,9 @@ p>a:hover{
     display: flex;
     height: auto;
 }
+.web--eatdogcat>div{
+    width: 50%;
+}
 .web--eatdog{
     height: auto;
     /* width: 50%; */
@@ -378,7 +390,9 @@ p>a:hover{
 }
 .web--eatcat--detail1{
     display: flex;
-    
+}
+.web--eatcat--detail1>a{
+    width: 50%;
 }
 
 .web--eatdog--block p{
@@ -483,6 +497,7 @@ button>a:hover{
 }
 .fashion--rectangle--detail>a{
     color: black !important;
+    width: 33%;
 }
 .fashion--rectangle--detail>a:hover{
     color: #FBE89E !important;
@@ -494,9 +509,10 @@ button>a:hover{
 }
 .special--product--detail2{
     background-color: white;
-    margin-right: 15px;
+    margin-right: 10px;
+    margin-left: 5px;
     border-radius: 10px;
-    height: 250px;
+    height: 300px;
     padding: 5px 10px;
 }
 
@@ -652,11 +668,10 @@ button>a:hover{
     width: 30%;
     background-color: #FF9E0C;
     border-radius: 10px;
-
-}.web--whychoose--content p{
     color: white;
     font-size: 30px;
     text-align: center;
+    padding: 10px;
 }
 .web--whychoose--block{
     margin:20px 40px 0 40px;
@@ -671,6 +686,8 @@ button>a:hover{
     height: 300px;
     width: auto;
     object-fit: cover;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 .whychoose--block--left{
     float: left;
@@ -794,6 +811,9 @@ button>a:hover{
     .search--input{
         width: 300px;
     }
+    .web--special--block>div{
+        width: 40%;
+    }
     .web--eatdogcat{
         display: block;
         height: auto;
@@ -812,19 +832,38 @@ button>a:hover{
     .web--dogcat--detail{
         display: block;
     }
-    
+
     .special--product--detail1{
         display: block;
     }
+    .web--eatdog{
+        width: 100% !important;
+    }
+    .web--eatcat{
+        width: 100% !important;
+    }
     .web--eatdog--detail1{
         display: flex;
-        width: 250px;
+        width: 70%;
         margin: auto;
+    }
+    .web--eatdog--detail1>a{
+        width: 50%;
+    }
+    .special--product--detail1{
+        padding: 10px 5px;
+    }
+    .special--product--name{
+        text-align: center;
     }
     .web--eatcat--detail1{
         display: flex;
-        width: 250px;
+        width: 70%;
         margin: auto;
+    }
+    
+    .special--product--price{
+        margin-top: 20px;
     }
     .web--eatcat{
         height: auto;
@@ -838,18 +877,22 @@ button>a:hover{
     .fashion--rectangle--detail{
         display: block;
         height: auto !important;
-        
+    }
+    .special--product--name{
+        height: 60px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .button--more{
         margin-top: 20px;
     }
     .special--product--detail2{
-        width: 300px;
-        height: 200px;
+        width: 50%;
+        height: 250px;
         margin: auto;
     }
     .web--fashion{
-        height: 1000px;
+        height: auto;
     }
     .fashion--rectangle--detail{
         height: 500px;
@@ -975,6 +1018,34 @@ button>a:hover{
     }
 
 }
+
+@media screen and (max-width: 500px){
+    .web--special--block>div{
+        width: 50% !important;
+    }
+    .web--eatdog--detail1{
+        width: 90% !important;
+    }
+    .web--eatcat--detail1{
+        width: 90% !important;
+    }
+    .special--product--detail{
+        padding: 10px;
+    }
+    .special--product--name{
+        height: 90px;
+    }
+    .special--product--detail2>.special--product--name{
+        height: 60px;
+    }
+    .special--product--detail>.special--product--img>img{
+        width: 100%;
+    }
+    .special--product--detail2{
+        width: 70%;
+    }
+}
+
 @media screen and(max-width:300px) {
     .special--product--item{
         display: block;

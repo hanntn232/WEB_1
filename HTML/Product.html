@@ -16,7 +16,7 @@
     <script src="../JS/sanPhamStorage.js"></script>
 </head>
 
-<body onload="taoDanhSachSanPham()">
+<body>
     <div class="app">
         <a href="../HTML/HOME.html">
             <div class="header">
@@ -174,6 +174,7 @@
         </div>
     </div>
     <script>
+        taoDanhSachSanPham();
         //Load sản phẩm trang 1 khi mở trang lên
         if (JSON.parse(localStorage.getItem('danhSachSanPhamTam')) == null) {
             var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
