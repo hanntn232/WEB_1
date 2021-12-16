@@ -1044,6 +1044,14 @@ button>a:hover{
     .special--product--detail2{
         width: 70%;
     }
+    .whychoose--block--right{
+        position: relative;
+    }
+    .whychoose--block--right img{
+        position: absolute;
+        height: 200px;
+        bottom: 0px;
+    }
 }
 
 @media screen and(max-width:300px) {
