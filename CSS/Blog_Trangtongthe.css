@@ -196,6 +196,9 @@
     width: 30%;
     margin: auto;
 }
+.xemthem div:hover{
+    cursor: pointer;
+}
 
 .mobile{
     display: none;
