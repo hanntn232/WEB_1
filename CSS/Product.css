@@ -204,6 +204,9 @@ html {
     will-change: transform;
     height: 90%;
 }
+div#dsSanPham1>div{
+    height: 250px;
+}
 
 .home-product-item__name {
     height: 60px;
@@ -214,11 +217,12 @@ html {
     box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05);
 }
 
+
 .home-product-item__img {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 150px;
+    min-height: 100px;
     max-height: 200px;
 }
 
@@ -501,6 +505,12 @@ html {
     .home-product.dsSanPham2 {
         display: block;
     }
+    .home-product-item__name{
+        margin-top: 20px;
+    }
+    div#dsSanPham2>div{
+        height: 250px;
+    }
     /* .home-product-item{
         height: 300px;
     } */
@@ -531,5 +541,14 @@ html {
     .xemthem div {
         display: block;
         font-size: 15px !important;
+    }
+}
+
+@media(max-width: 400px){
+    .home-product-item__name{
+        height: 90px;
+    }
+    div#dsSanPham2>div{
+        height: 300px;
     }
 }
