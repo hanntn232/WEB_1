@@ -399,6 +399,13 @@
             localStorage.removeItem('danhSachSanPhamTam');
             window.location.reload();
         })
+
+        //Khi trở về màn hình desktop thì menu navbar của mobile phải tắt
+        window.onresize = function () {
+                if (!window.matchMedia('(max-width: 740px)').matches) {
+                    document.getElementById('nav-mobile-input').checked = false;
+                }
+            } 
     </script>
 </body>
 
