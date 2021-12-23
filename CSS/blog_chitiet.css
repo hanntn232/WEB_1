@@ -12,6 +12,9 @@ a {
     text-decoration: none;
     font-size: 20px;
 }
+a:hover{
+    color: #FFC700;
+}
 .title-color{
     color:#FFC700;
 }
