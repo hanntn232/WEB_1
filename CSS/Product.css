@@ -474,14 +474,6 @@ div#dsSanPham1>div{
 /* tablet */
 
 
-/* @media  (min-width: 721px) and (max-width: 1023px)
-{
-    .nav__bars-btn{
-        display: block;
-    }
-    
-} */
-
 @media(max-width: 739.5px) {
     .nav__bars-btn {
         display: block;
@@ -511,9 +503,7 @@ div#dsSanPham1>div{
     div#dsSanPham2>div{
         height: 250px;
     }
-    /* .home-product-item{
-        height: 300px;
-    } */
+   
 }
 
 
@@ -524,9 +514,7 @@ div#dsSanPham1>div{
         font-family: Opensans;
         font-size: 12px;
     }
-    /* .home-product-item{
-        height: 300px;
-    } */
+   
     .category {
         display: none;
     }
