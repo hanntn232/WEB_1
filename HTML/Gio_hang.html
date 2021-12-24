@@ -18,9 +18,10 @@
     <!-- Header -->
     <a href="../HTML/HOME.html">
         <div class="header">
-         <img src="../Image/header.jpg" alt="SunPet">
-         <div class="header--overlay"></div>
-     </div></a>
+            <img src="../Image/header.jpg" alt="SunPet">
+            <div class="header--overlay"></div>
+        </div>
+    </a>
 
     <!-- Giỏ hàng -->
     <div class="giohang--bgr" id="dsGioHang">
@@ -85,10 +86,14 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-xs-12 bold btn-center">
-                    <button class="btn-tieptucmuahang">Tiếp tục mua hàng</button>
+                    <a href="../HTML/Product.html">
+                        <button class="btn-tieptucmuahang">Tiếp tục mua hàng</button>
+                    </a>
                 </div>
                 <div class="col-sm-12 col-xs-12 bold btn-center">
-                    <button class="btn-tienhanhdathang">Tiến hành đặt hàng</button>
+                    <a href="../HTML/Dat_hang.html">
+                        <button class="btn-tienhanhdathang">Tiến hành đặt hàng</button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -105,15 +110,15 @@
         var idGioHang = layIdGioHang();
 
         document.getElementById('giohang1').innerHTML = hienThiDanhSachItemGioHang_Desktop(idGioHang);
-        
+
 
         document.getElementById('giohang2').innerHTML = hienThiDanhSachItemGioHang_Mobile(idGioHang);
-        
+
 
         //Hiển thị tổng giá trị đơn hàng
-        document.getElementById('tongtien1').innerHTML = dinhDangTienTe((tinhTongGiaTriDonHang(idGioHang)/1000).toString());
+        document.getElementById('tongtien1').innerHTML = dinhDangTienTe((tinhTongGiaTriDonHang(idGioHang) / 1000).toString());
 
-        document.getElementById('tongtien2').innerHTML = dinhDangTienTe((tinhTongGiaTriDonHang(idGioHang)/1000).toString());
+        document.getElementById('tongtien2').innerHTML = dinhDangTienTe((tinhTongGiaTriDonHang(idGioHang) / 1000).toString());
 
     </script>
 
