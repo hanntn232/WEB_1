@@ -114,6 +114,7 @@
     background:#FFC700;
     transition: all 0.4s;
     font-weight: bold;
+    border-radius: 10px;
   }
   .submit-btn .input-data:hover .button{
     background-color: #FFD541;

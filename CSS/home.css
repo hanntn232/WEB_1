@@ -394,6 +394,9 @@ p>a:hover{
 .web--eatcat--detail1>a{
     width: 50%;
 }
+.web--eatdog--detail1>a{
+    width: 50%;
+}
 
 .web--eatdog--block p{
     background-color: #FFC700;
