@@ -519,8 +519,9 @@ button>a:hover{
     padding: 5px 10px;
 }
 
+/* Đã sửa sau khi nộp */
 .web--fashion{
-    height: 600px;
+    height: auto;
     background-color: #FEF8E1;
 }
 .web--fashion--content{

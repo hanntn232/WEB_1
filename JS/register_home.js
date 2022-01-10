@@ -50,7 +50,6 @@ function kiemTraTonTaiEmail(email, dsEmail) {
         }
     }
     return tonTai;
-
 }
 
 
